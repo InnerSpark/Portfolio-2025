@@ -22,7 +22,7 @@ const Resume = () => {
       company: 'Dun & Bradstreet',
       location: 'Austin, Texas, United States · Remote',
       period: 'Jul 2022 - March 2026',
-      description: null,
+      description: 'Business Information / Data Analytics',
       duties: [
         'Led research and redesign efforts on D&B Hoovers (our B2B sales intel platform). Cleaned up workflows so sales reps prospect 28% faster.',
         'Pushed accessibility company-wide: wrote guidelines, started the accessibility working group, drove WCAG standards everywhere, in doing such I cut accessibility issues by 40% and got people actually caring and talking about inclusive design daily.',
@@ -37,7 +37,7 @@ const Resume = () => {
       company: 'Ozmo',
       location: 'Austin, TX',
       period: 'Oct 2021 - Jun 2022 · 9 mos',
-      description: null,
+      description: 'Tech Support / Customer Experience Software',
       duties: [
         'Mentored a team of designers across multiple products, guiding high-quality deliverables and professional growth.',
         'Teamed up with product to improve platform usage. Boosted adoption 20% and made users more efficient.',
@@ -52,7 +52,7 @@ const Resume = () => {
       company: 'Realogy (now Anywhere Real Estate)',
       location: 'Madison, NJ',
       period: 'Sep 2020 - Oct 2021',
-      description: 'Led UX design for enterprise real estate platforms serving brands like Coldwell Banker and Century 21.',
+      description: 'Residential Real Estate Services',
       duties: [
         'Led the UX design for a new enterprise Lead Management platform that empowered real estate agents and brokers to capture, nurture, and convert high-volume leads efficiently across major brands (Century 21, Coldwell Banker, Sotheby\'s International Realty, ERA, etc.), increasing lead conversion rates by 20%.',
         'Aligned cross-functional teams on user-centered principles. Turned complex needs into simple wireframes, flows, interfaces that cut task time 30% by reducing mental overload.',
@@ -65,7 +65,7 @@ const Resume = () => {
       company: 'iBASEt',
       location: 'Foothill Ranch, CA',
       period: 'April 2015 – June 2020',
-      description: null,
+      description: 'Manufacturing Execution Systems',
       employmentType: 'Full-time',
       duties: [
         'Owned UX end-to-end for Solumina iNEXT/iSeries (flagship MES for aerospace/defense/precision manufacturing). Led full redesign from concept to launch: modern, intuitive, responsive UI with 80%+ shop-floor adoption in Q1.',
@@ -210,18 +210,18 @@ const Resume = () => {
                       
                       <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-4">
                         <span className="text-base font-semibold text-neutral-700">
-                          {job.company} {job.employmentType && <span className="text-neutral-400 font-normal ml-1">· {job.employmentType}</span>}
+                          {job.company} {job.description && <span className="text-brand-blue font-normal ml-1">· {job.description}</span>}
                         </span>
-                        <span className="text-xs text-neutral-400">
+                        {/* <span className="text-xs text-neutral-400">
                           {job.location}
-                        </span>
+                        </span> */}
                       </div>
 
-                      {job.description && (
+                      {/* {job.description && (
                         <p className="text-neutral-600 leading-relaxed mb-4">
                           {job.description}
                         </p>
-                      )}
+                      )} */}
                       
                       {job.duties && (
                         <ul className="list-disc list-outside pl-5 space-y-2 text-sm text-neutral-600">
@@ -268,7 +268,7 @@ const Resume = () => {
                           <p className="text-base font-bold text-neutral-900">{rec.name}</p>
                           <p className="text-sm text-neutral-500">{rec.date}</p>
                         </div>
-                        <p className="text-xs text-neutral-400 italic">
+                        <p className="text-xs text-brand-blue italic">
                           {rec.relationship}
                         </p>
                       </div>
