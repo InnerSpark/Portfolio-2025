@@ -169,7 +169,16 @@ const Resume = () => {
             <Button
               onClick={handleDownload}
               variant="outline"
+              onClick={() => {
+                const link = document.createElement('a');
+                link.href = '/Mike Binder Resume.pdf';                // exact path from public/
+                link.download = 'Mike-Binder-Resume.pdf';             // clean filename on save
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
               className="gap-2 hover:bg-neutral-50 transition-colors"
+              aria-label="Download Mike Binder's resume as PDF"
             >
               <Download size={16} />
               <span className="hidden sm:inline">Download CV</span>
