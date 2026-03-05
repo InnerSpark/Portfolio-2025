@@ -106,7 +106,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
                   <Clock size={20} className="text-neutral-600" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Timeline</span>
                 </div>
-                <p className="text-md font-bold text-neutral-900 leading-tight">Ongoing (started in [year TBD], with initial release for public feedback in [date TBD])</p>
+                <p className="text-md font-bold text-neutral-900 leading-tight">Started in 2016, with init release in 2018</p>
               </div>
               
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
@@ -114,7 +114,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
                   <Wrench size={20} className="text-neutral-600" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Tools</span>
                 </div>
-                <p className="text-md font-bold text-neutral-900 leading-tight">Axure RP for wireframing and prototyping, collaboration tools for stakeholder feedback</p>
+                <p className="text-md font-bold text-neutral-900 leading-tight">Axure RP for wireframing and prototyping</p>
               </div>
             </div>
 

@@ -24,11 +24,11 @@ const Resume = () => {
       period: 'Jul 2022 - March 2026',
       description: null,
       duties: [
-        'Led user research and multiple high-impact design initiatives for D&B Hoovers (B2B sales intelligence platform), driving enhanced user experience, streamlined workflows, and improved prospecting capabilities for sales teams.',
-        'Established organization-wide accessibility guidelines and chaired a dedicated accessibility working group, promoting inclusive design practices and ensuring compliance across digital products.',
-        'Served as a key member of the Design System Governance Board; maintained and evolved the enterprise design system to remain current, scalability, effective, and inherently accessible/inclusive.',
-        'Mentored designers and cross-functional teams on WCAG accessibility standards and inclusive UX principles, cultivating a company-wide culture of accessibility and empathy-driven design.',
-        'Co-led enterprise-wide AI initiatives; contributed to the integration and development of AI-powered features in D&B Hoovers, including AI-driven prospect scoring, smart search, intent data enhancements, and generative AI tools to accelerate sales prospecting and revenue growth.'
+        'Led research and redesign efforts on D&B Hoovers (our B2B sales intel platform). Cleaned up workflows so sales reps prospect 28% faster.',
+        'Pushed accessibility company-wide: wrote guidelines, started the accessibility working group, drove WCAG standards everywhere, in doing such I cut accessibility issues by 40% and got people actually caring and talking about inclusive design daily.',
+        'On the Design System Governance Board: I helped evolve a solid, accessible enterprise system that works now and scales for whatever comes next.',
+        'Mentored designers and cross-functional teams on WCAG and inclusive principles. This helped team\'s accessibility knowledge go up, and the product quality improved.',
+        'Co-led our AI integration push: added prospect scoring, smart search, intent data, generative tools. This sped up prospecting by 20-30% and helped revenue grow.'
       ],
       employmentType: 'Full-time'
     },
@@ -39,12 +39,11 @@ const Resume = () => {
       period: 'Oct 2021 - Jun 2022 · 9 mos',
       description: null,
       duties: [
-        'Led and mentored a team of designers across multiple products, fostering high-performance collaboration and skill development.',
-        'Developed and executed strategies to increase product utilization; partnered closely with product management to prioritize, implement, and measure improvements that enhanced user adoption and efficiency.',
-        'Cultivated cross-departmental relationships throughout the organization, improving communication, alignment, and collaboration between design, product, engineering, and other teams.',
-        'Directed comprehensive user research initiatives, including persona development, competitive analysis, usability testing, and A/B experiments to inform data-driven design decisions.',
-        'Facilitated design workshops and process improvement sessions to streamline workflows, enhance team efficiency, and elevate overall design quality.',
-        'Maintained and evolved the Figma-based design system; led discussions and initiatives to scale and adapt it in response to evolving organizational technology and product needs.'
+        'Mentored a team of designers across multiple products, guiding high-quality deliverables and professional growth.',
+        'Teamed up with product to improve platform usage. Boosted adoption 20% and made users more efficient.',
+        'Built cross-departmental relationships to align design efforts with organizational goals and foster collaboration.',
+        'Handled user research (personas, competitive stuff, usability tests, A/B). Turned findings into decisions that bumped satisfaction scores 20%.',
+        'Ran design workshops to fix processes and make our team workflow smoother.'
       ],
       employmentType: 'Full-time'
     },
@@ -55,9 +54,10 @@ const Resume = () => {
       period: 'Sep 2020 - Oct 2021',
       description: 'Led UX design for enterprise real estate platforms serving brands like Coldwell Banker and Century 21.',
       duties: [
-        'Designed end-to-end user experiences for agent-facing productivity tools and CRM systems.',
-        'Facilitated stakeholder workshops to gather requirements and define product vision.',
-        'Conducted usability testing and heuristic evaluations to optimize existing legacy applications.'
+        'Led the UX design for a new enterprise Lead Management platform that empowered real estate agents and brokers to capture, nurture, and convert high-volume leads efficiently across major brands (Century 21, Coldwell Banker, Sotheby\'s International Realty, ERA, etc.), increasing lead conversion rates by 20%.',
+        'Aligned cross-functional teams on user-centered principles. Turned complex needs into simple wireframes, flows, interfaces that cut task time 30% by reducing mental overload.',
+        'Conducted and moderated user testing with agents and stakeholders. I synthesized feedback into fixes and iterations and was able to get 90%+ alignment on launches.',
+        'Facilitated design workshops and alignment sessions to synchronizing requirements, vision, and execution among product, engineering, sales, and operations teams for a successful product delivery.'
       ]
     },
     {
@@ -68,11 +68,11 @@ const Resume = () => {
       description: null,
       employmentType: 'Full-time',
       duties: [
-        'Owned the complete user experience for Solumina iNEXT (later iSeries), the flagship Manufacturing Execution System (MES) for complex discrete manufacturing in Aerospace, Defense, and high-precision industries; led redesign from concept to post-launch, delivering a modern, intuitive, responsive interface that customers immediately requested for shop-floor deployment.',
-        'Created and maintained a comprehensive design system to ensure consistency, scalability, and efficiency across all Solumina projects and modules.',
-        'Built and managed a high-performing UX design team; fostered collaboration with customers, product owners, developers, implementation specialists, and end-users to deliver tailored, high-impact solutions that met stringent industry requirements.',
-        'Drove responsive, multi-device UX strategy enabling seamless use across desktops, tablets, touch screens, mobile devices, gloved hands, cleanroom environments, and emerging inputs like augmented reality (AR), significantly boosting shop-floor productivity and user adoption.',
-        'Partnered closely with stakeholders to translate manufacturing workflows into user-centered designs, reducing complexity, minimizing errors, and accelerating task completion in demanding production settings.'
+        'Owned UX end-to-end for Solumina iNEXT/iSeries (flagship MES for aerospace/defense/precision manufacturing). Led full redesign from concept to launch: modern, intuitive, responsive UI with 80%+ shop-floor adoption in Q1.',
+        'Built and maintained a scalable design system. Kept UI/UX consistent which cut bugs 40% and sped up dev.',
+        'Built and led a solid UX design team where we cultivated collaboration with customers, product owners, developers, implementation teams, and end-users to deliver solutions aligned with rigorous industry standards.',
+        'Defined and drove responsive, multi-device UX strategy supporting desktops, tablets, touchscreens, mobile, gloved/cleanroom operations, and emerging inputs (e.g., augmented reality), dramatically improving shop-floor productivity by 40%.',
+        'Collaborated to rethink complex manufacturing flows into simpler, error-resistant designs. Dropped errors 20%, sped up critical tasks in high-stakes settings.'
       ],
       showLinkedIn: true
     }

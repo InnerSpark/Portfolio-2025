@@ -49,7 +49,7 @@ const Projects = () => {
       category: 'UX/UI Design • AI Integration',
       description: 'Envisioning an AI-Driven, Accessible Future for Business Intelligence. Redesigning the search experience to improve time-to-insight by up to 65%.',
       tags: ['AI Search', 'Accessibility', 'Figma', 'Enterprise SaaS'],
-      image: 'https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/46e8caff7078f4a57fb52353392ba38a.png', // Placeholder
+      image: '/img/dnb_hero_home.png',
     },
     {
       id: 'realogy',
@@ -57,7 +57,7 @@ const Projects = () => {
       category: 'UX/UI Design • Enterprise SaaS',
       description: 'Complete redesign of a lead management platform serving 50K+ daily leads for real estate brokers across major brands. Reduced task completion time by 40% and increased user satisfaction by 45%.',
       tags: ['Enterprise UX', 'Information Architecture', 'Mobile Design', 'Usability Testing'],
-      image: 'https://images.unsplash.com/photo-1697638164340-6c5fc558bdf2'
+      image: '/img/realogy_hero_home.png',
     },
     {
       id: 'ibaset-mes',
@@ -65,7 +65,7 @@ const Projects = () => {
       category: 'UX/UI Design • Enterprise Software',
       description: "Transforming a '90s-era Windows client into a streamlined, user-centric web platform for aerospace and defense manufacturing.",
       tags: ['UX Design', 'Enterprise Software', 'Usability', 'Axure RP'],
-      image: 'https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/db91f14220f5de71fe1f3bf5afe24e4a.png'
+      image: '/img/ibaset_hero_home.png',
     },
     {
       id: 'ibaset',
@@ -73,7 +73,7 @@ const Projects = () => {
       category: 'UX/UI Design • Mobile App',
       description: 'Mobile solution for shop floor technicians in aerospace/defense manufacturing, enabling barcode scanning and on-the-spot part actions.',
       tags: ['UX Design', 'Mobile', 'Enterprise Software', 'Manufacturing'],
-      image: 'https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/0ee12223d09070653dbebc648f292592.png'
+      image: '/img/ibaset_unit_info_hero_home.png'
     }
   ];
 
