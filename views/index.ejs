@@ -4,145 +4,134 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Inner Spark Media - UX Designer Portfolio</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <style>
-    /* Quick inline fallback styles – move to style.css later */
-    :root { --primary: #007bff; --dark: #333; --light: #f8f9fa; }
-    body { margin:0; font-family: system-ui, sans-serif; line-height:1.6; color:var(--dark); background:var(--light); }
-    header, section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
-    nav { position: sticky; top:0; background:white; box-shadow:0 2px 10px rgba(0,0,0,0.1); z-index:100; padding:1rem; text-align:center; }
-    nav a { margin:0 1.2rem; color:var(--dark); text-decoration:none; font-weight:600; }
-    nav a:hover { color:var(--primary); }
-    h1, h2 { color:var(--dark); }
-    .hero { background:#e9f1ff; text-align:center; }
-    .btn { background:var(--primary); color:white; padding:0.8rem 1.8rem; border:none; border-radius:6px; cursor:pointer; font-size:1.1rem; }
-    .btn:hover { background:#0056b3; }
-    .section { margin:3rem 0; }
-    .grid { display:grid; gap:2rem; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); }
-    form { display:grid; gap:1.2rem; max-width:500px; margin:2rem auto; }
-    input, textarea { padding:0.8rem; border:1px solid #ccc; border-radius:4px; font-size:1rem; }
-    footer { text-align:center; padding:2rem; background:#333; color:white; }
-    @media (max-width:768px) { nav a { margin:0 0.8rem; font-size:0.95rem; } }
-  </style>
+  <link rel="stylesheet" href="/css/style.css">   <!-- This line connects it -->
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About Me</a>
+    <a href="#featured">Featured Work</a>
     <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+    <a href="#contact">Get in Touch</a>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero" id="top">
+  <header class="hero">
     <h1>Inner Spark Media</h1>
-    <h2>UX Designer & Strategist</h2>
-    <p>Hi, I'm Mike Binder. Creating intuitive, accessible, and inclusive digital experiences.</p>
-    <button class="btn" onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">View Portfolio</button>
+    <h2>UX Designer</h2>
+    <p>Hi, I'm Mike Binder. Specializing in UX Design, Accessibility, and Information Architecture for engaging and inclusive digital experiences.</p>
+    <button class="btn" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">Explore Work</button>
   </header>
 
-  <!-- About -->
-  <section id="about" class="section">
+  <section id="about">
     <h2>About Me</h2>
-    <p>UX Designer & Strategist | Founder, Inner Spark Media</p>
-    <p>I started building websites in the mid-90s using MS Paint and Notepad. After earning a degree in Interactive Media Design, I evolved into a full-stack hybrid before committing fully to UX in 2009.</p>
-    <p>I'm obsessed with information architecture, web accessibility (WCAG), and turning complex problems into clear, efficient solutions. Through Inner Spark Media, I help businesses with direction, IA, accessibility, and AI integration.</p>
+    <div class="section-content">
+      <h3>UX Designer & Strategist | Founder, Inner Spark Media</h3>
+      <p>I started building websites in the mid-90s with MS Paint and Notepad, freelancing for local businesses in high school and launching my own agency as a teen. After a degree in Interactive Media Design, I evolved into a full-stack hybrid before committing to UX Design in 2009.</p>
+      <p>Today, I champion intuitive, inclusive experiences—obsessed with information architecture that makes complexity feel simple and web accessibility that includes everyone. At iBASEt, I built and led a small UI/UX team from zero, embedding real UX culture and transforming manufacturing workflows for faster, frictionless daily operations in aerospace & defense.</p>
+      <p>I've driven similar impact at Dun & Bradstreet, Realogy, and more—speeding enterprise tasks and proving UX's ROI. Through Inner Spark Media, I consult strategically, guiding small businesses on direction, IA, accessibility, and AI integration (agent flows that go way beyond chat to automate decisions and augment work).</p>
+      <p>I turn complex problems into clear, efficient solutions users love. Let's talk if you need a seasoned UX leader who delivers results.</p>
 
-    <h3>Core Specializations</h3>
-    <ul>
-      <li>User Research</li>
-      <li>Information Architecture</li>
-      <li>Accessibility Design (WCAG)</li>
-      <li>Usability Testing</li>
-      <li>Wireframing & Prototyping</li>
-      <li>Interaction Design</li>
-      <li>Content Strategy</li>
-      <li>Design Systems</li>
-    </ul>
+      <h3>Core Specializations</h3>
+      <ul>
+        <li>User Research</li>
+        <li>Information Architecture</li>
+        <li>Accessibility Design (WCAG)</li>
+        <li>Usability Testing</li>
+        <li>Wireframing & Prototyping</li>
+        <li>Interaction Design</li>
+        <li>Content Strategy</li>
+        <li>Design Systems</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio" class="section">
-    <h2>Portfolio</h2>
-    <h3>Featured Case Studies</h3>
-    <div class="grid">
-      <div>
+  <section id="featured" style="background:#f8f9fa;">
+    <h2>Featured Work</h2>
+    <div class="section-content">
+      <h3>Case Studies</h3>
+
+      <div class="project">
         <h4>D&B Hoovers Redesign</h4>
-        <p>UX/UI Design • AI Integration | Redesigned search experience for better time-to-insight and accessibility in enterprise SaaS.</p>
-        <!-- Add: <img src="/images/dnb-hoovers.jpg" alt="D&B Hoovers project" style="width:100%; border-radius:8px;"> -->
+        <div class="tags">UX/UI Design • AI Integration | AI Search Accessibility Figma Enterprise SaaS</div>
+        <p>Envisioning an AI-Driven, Accessible Future for Business Intelligence. Redesigning the search experience to improve time-to-insight by up to 65%.</p>
       </div>
-      <div>
+
+      <div class="project">
         <h4>Realogy Leads Engine Redesign</h4>
-        <p>Reduced task time by 40%, increased satisfaction by 45% for high-volume lead platform.</p>
+        <div class="tags">UX/UI Design • Enterprise SaaS | Enterprise UX Information Architecture Mobile Design Usability Testing</div>
+        <p>Complete redesign of a lead management platform serving 50K+ daily leads for real estate brokers across major brands. Reduced task completion time by 40% and increased user satisfaction by 45%.</p>
       </div>
-      <div>
-        <h4>iBASEt MES System Revamp</h4>
-        <p>Transformed legacy Windows app into modern web platform for aerospace/defense manufacturing.</p>
+
+      <div class="project">
+        <h4>Revamping iBASEt's MES System</h4>
+        <div class="tags">UX/UI Design • Enterprise Software | UX Design Enterprise Software Usability Axure RP</div>
+        <p>Transforming a '90s-era Windows client into a streamlined, user-centric web platform for aerospace and defense manufacturing.</p>
       </div>
-      <div>
-        <h4>iBASEt Unit Info Mobile App</h4>
-        <p>Mobile workflow app with barcode scanning for shop floor technicians.</p>
+
+      <div class="project">
+        <h4>iBASEt Unit Info App: Mobile Workflow for Shop Floor Technicians</h4>
+        <div class="tags">UX/UI Design • Mobile App | UX Design Mobile Enterprise Software Manufacturing</div>
+        <p>Mobile solution for shop floor technicians in aerospace/defense manufacturing, enabling barcode scanning and on-the-spot part actions.</p>
       </div>
     </div>
   </section>
 
-  <!-- Resume -->
-  <section id="resume" class="section">
+  <section id="resume">
     <h2>Resume</h2>
-    <p><strong>Mike Binder</strong> — Austin, TX</p>
-    <p><a href="https://www.linkedin.com/in/innerspark/" target="_blank">Full LinkedIn Profile</a></p>
+    <div class="section-content">
+      <p><strong>Mike Binder</strong> — <a href="https://www.linkedin.com/in/innerspark/" target="_blank" style="color:var(--primary);">View full profile on LinkedIn</a></p>
+      <button class="btn" style="margin:1rem 0;">Download CV</button>
 
-    <h3>Professional Experience</h3>
-    <ul>
-      <li><strong>Sr. UX Designer</strong> — Dun & Bradstreet (2022–2026)<br>Led research, accessibility, design system governance, AI features for Hoovers platform.</li>
-      <li><strong>Lead Product Designer</strong> — Ozmo (2021–2022)<br>Mentored team, increased product utilization, managed Figma design system.</li>
-      <li><strong>Lead UX Architect</strong> — Realogy (2020–2021)<br>Designed agent tools and CRM systems.</li>
-      <li><strong>Head of User Experience</strong> — iBASEt (2015–2020)<br>Owned UX for MES system, built team, created design system.</li>
-    </ul>
+      <h3>Professional Experience</h3>
+      <div class="experience">
+        <h4>Sr. UX Designer</h4>
+        <p class="date-company">Jul 2022 – March 2026 · Dun & Bradstreet · Full-time · Austin, Texas, United States · Remote</p>
+        <ul>
+          <li>Led user research and multiple high-impact design initiatives for D&B Hoovers...</li>
+          <li>Established organization-wide accessibility guidelines and chaired a dedicated accessibility working group...</li>
+          <li>Served as a key member of the Design System Governance Board...</li>
+          <li>Mentored designers and cross-functional teams on WCAG accessibility standards...</li>
+          <li>Co-led enterprise-wide AI initiatives...</li>
+        </ul>
+      </div>
 
-    <h3>Education</h3>
-    <p>B.S. Interactive Media Design — Art Institute of Southern California (2006)</p>
+      <!-- Add the other experiences similarly; abbreviated here for space. Paste full from earlier scan if needed -->
 
-    <h3>Skills</h3>
-    <p>UX • UI • Information Architecture • Accessibility (WCAG) • Figma • Usability Testing • Design Systems • HTML/CSS • JavaScript basics</p>
+      <h3>Recommendations</h3>
+      <!-- Add the 7 recommendations here in blockquote or p format, matching scan -->
+
+      <h3>Skills</h3>
+      <!-- Categories: Design, Development, Tools, Mobile Design – use dl/dt/dd or h4 + ul -->
+
+      <h3>Education</h3>
+      <p>Bachelor of Science in Interactive Media Design – 2006 – Art Institute of Southern California, Orange County</p>
+    </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <p>Let's create something meaningful together. Drop me a line about UX, accessibility, IA, or your project.</p>
-    
-    <% if (typeof success !== 'undefined') { %>
-      <p style="color:green; text-align:center; font-weight:bold;">Thanks! Your message has been sent.</p>
-    <% } %>
+  <section id="contact" style="background:#f8f9fa;">
+    <h2>Get in Touch</h2>
+    <div class="section-content" style="text-align:center;">
+      <h3>Let's create something meaningful together.</h3>
+      <p>Whether you have a project in mind or just want to chat about UX design, accessibility, or information architecture, I'd love to hear from you.</p>
 
-    <form action="/contact" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
+      <% if (success) { %>
+        <p class="success-msg">Thanks! Your message was sent successfully.</p>
+      <% } %>
 
-    <p style="text-align:center; margin-top:2rem;">
-      Email: <a href="mailto:mike@innersparkmedia.com">mike@innersparkmedia.com</a><br>
-      Phone: 760.208.0433<br>
-      Location: Austin, TX
-    </p>
+      <form action="/contact" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:mike@innersparkmedia.com">mike@innersparkmedia.com</a></p>
+        <p><strong>Phone:</strong> 760.208.0433</p>
+        <p><strong>Location:</strong> Austin, TX</p>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; <%= new Date().getFullYear() %> Inner Spark Media. All rights reserved.</p>
-  </footer>
-
-  <script>
-    // Optional: Show success message cleanup or smooth scroll
-    if (window.location.search.includes('success')) {
-      setTimeout(() => {
-        history.replaceState(null, null, window.location.pathname + '#contact');
-      }, 4000);
-    }
-  </script>
 </body>
 </html>
