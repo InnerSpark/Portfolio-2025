@@ -167,7 +167,6 @@ const Resume = () => {
               <p className="text-3xl font-bold text-neutral-900">Mike Binder</p>
             </div>
             <Button
-              onClick={handleDownload}
               variant="outline"
               onClick={() => {
                 const link = document.createElement('a');
