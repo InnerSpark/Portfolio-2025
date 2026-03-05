@@ -145,7 +145,7 @@ const Projects = () => {
                         <span className="inline-flex items-center px-3 py-1 bg-neutral-100 text-neutral-800 text-xs font-bold uppercase tracking-wider rounded-full">
                           {project.category}
                         </span>
-                        <div className="w-12 h-12 rounded-full bg-neutral-50 flex items-center justify-center border border-neutral-100 group-hover:bg-neutral-900 group-hover:border-neutral-900 transition-colors duration-300 flex-shrink-0">
+                        <div className="w-12 h-12 rounded-full bg-neutral-50 flex items-center justify-center border border-neutral-100 group-hover:bg-brand-blue group-hover:border-brand-blue transition-colors duration-300 flex-shrink-0">
                           <ArrowUpRight 
                             size={24} 
                             className="text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" 

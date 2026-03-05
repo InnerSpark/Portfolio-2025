@@ -61,8 +61,8 @@ const Hero = () => {
               whileHover={{ y: 2 }}
             >
               <span className="text-sm md:text-base uppercase tracking-wider">Explore Work</span>
-              <div className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-neutral-200 transition-colors">
-                <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform" />
+              <div className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-brand-blue transition-colors">
+                <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform group-hover:text-white" />
               </div>
             </motion.button>
           </motion.div>

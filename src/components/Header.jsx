@@ -51,7 +51,7 @@ const Header = () => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+                className="text-sm font-medium text-neutral-600 hover:text-brand-blue transition-colors"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -64,7 +64,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-neutral-900 hover:bg-neutral-100 rounded-lg transition-colors"
+            className="md:hidden p-2 text-neutral-900 hover:text-brand-blue rounded-lg transition-colors"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -83,7 +83,7 @@ const Header = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-left py-3 px-4 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 rounded-lg transition-colors"
+                className="text-left py-3 px-4 text-sm font-medium text-neutral-600 hover:text-brand-blue hover:bg-neutral-50 rounded-lg transition-colors"
               >
                 {item.label}
               </button>
