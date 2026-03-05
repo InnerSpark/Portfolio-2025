@@ -1,21 +1,55 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef as useRefAlias } from 'react'; // alias to avoid conflict if needed
 import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/components/ui/use-toast';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { toast } = useToast();
 
+  const formRef = useRef(null);
+  const [status, setStatus] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleSendMessage = (e) => {
     e.preventDefault();
-    toast({
-      title: '🚧 This feature isn\'t implemented yet—but don\'t worry! You can request it in your next prompt! 🚀',
-    });
+    setIsLoading(true);
+    setStatus('');
+
+    emailjs
+      .sendForm(
+        'service_6p35h2p',   // ← REAL Service ID
+        'template_3lrjx68', // ← REAL Template ID
+        formRef.current,
+        '1imYFFp2EsJwejkWQ'       // ← REAL Public Key
+      )
+      .then(
+        (result) => {
+          console.log('SUCCESS!', result.text);
+          setStatus('Message sent successfully! I’ll get back to you soon.');
+          setIsLoading(false);
+          formRef.current.reset();
+          toast({
+            title: 'Message Sent',
+            description: 'Thank you! Your message has been received.',
+          });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          setStatus('Sorry, there was an error sending your message. Please try again or email me directly.');
+          setIsLoading(false);
+          toast({
+            title: 'Error',
+            description: 'Failed to send message. Please try again.',
+            variant: 'destructive',
+          });
+        }
+      );
   };
 
   return (
@@ -70,15 +104,17 @@ const Contact = () => {
           </div>
 
           <div className="bg-neutral-800 p-8 rounded-2xl border border-neutral-700">
-            <form onSubmit={handleSendMessage} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSendMessage} className="space-y-6">
               <div className="grid grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label htmlFor="name" className="text-sm font-medium text-neutral-300">Name</label>
                   <input 
                     type="text" 
                     id="name"
+                    name="user_name"
                     className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors"
                     placeholder="Jane Doe"
+                    required
                   />
                 </div>
                 <div className="space-y-2">
@@ -86,8 +122,10 @@ const Contact = () => {
                   <input 
                     type="email" 
                     id="email"
+                    name="user_email"
                     className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors"
                     placeholder="jane@example.com"
+                    required
                   />
                 </div>
               </div>
@@ -97,6 +135,7 @@ const Contact = () => {
                 <input 
                   type="text" 
                   id="subject"
+                  name="subject"
                   className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors"
                   placeholder="Project Inquiry"
                 />
@@ -106,15 +145,28 @@ const Contact = () => {
                 <label htmlFor="message" className="text-sm font-medium text-neutral-300">Message</label>
                 <textarea 
                   id="message"
+                  name="message"
                   rows={4}
                   className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors resize-none"
                   placeholder="Tell me about your project..."
+                  required
                 />
               </div>
 
-              <Button type="submit" size="lg" className="w-full bg-white text-neutral-900 hover:bg-neutral-200">
-                Send Message
+              <Button 
+                type="submit" 
+                size="lg" 
+                className="w-full bg-white text-neutral-900 hover:bg-neutral-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isLoading}
+              >
+                {isLoading ? 'Sending...' : 'Send Message'}
               </Button>
+
+              {status && (
+                <p className={`text-center mt-4 text-sm ${status.includes('success') ? 'text-green-400' : 'text-red-400'}`}>
+                  {status}
+                </p>
+              )}
             </form>
           </div>
         </motion.div>
