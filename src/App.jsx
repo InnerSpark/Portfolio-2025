@@ -32,8 +32,19 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Inner Spark Media - UX Designer Portfolio</title>
-        <meta name="description" content="Inner Spark Media: A UX Designer portfolio showcasing user-centered design solutions, research-driven projects, and innovative digital experiences." />
+        <title>Mike Binder | UX Designer & Strategist – Inner Spark Media Portfolio | Austin TX</title>
+        <meta name="description" content="Mike Binder – UX Designer specializing in accessibility (WCAG), information architecture, enterprise SaaS redesigns, and AI-integrated experiences. View portfolio case studies from Dun & Bradstreet, Realogy, iBASEt. Austin, TX." />
+
+        <meta property="og:title" content="Mike Binder – UX Designer Portfolio | Inner Spark Media" />
+        <meta property="og:description" content="Specializing in WCAG accessibility, information architecture, enterprise UX, and AI-driven design. Case studies from D&B Hoovers, Realogy, iBASEt." />
+        <meta property="og:url" content="https://innerspark.studio/" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mike Binder UX Portfolio" />
+        <meta name="twitter:description" content="..." />
+        <meta name="twitter:image" content="https://innerspark.studio/img/og-image.jpg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <BrowserRouter>
         <div className="min-h-screen bg-neutral-50 text-neutral-900">
