@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inner Spark Media - UX Designer Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css">   <!-- This line connects it -->
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#featured">Featured Work</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Get in Touch</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Inner Spark Media</h1>
+    <h2>UX Designer</h2>
+    <p>Hi, I'm Mike Binder. Specializing in UX Design, Accessibility, and Information Architecture for engaging and inclusive digital experiences.</p>
+    <button class="btn" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">Explore Work</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="section-content">
+      <h3>UX Designer & Strategist | Founder, Inner Spark Media</h3>
+      <p>I started building websites in the mid-90s with MS Paint and Notepad, freelancing for local businesses in high school and launching my own agency as a teen. After a degree in Interactive Media Design, I evolved into a full-stack hybrid before committing to UX Design in 2009.</p>
+      <p>Today, I champion intuitive, inclusive experiences—obsessed with information architecture that makes complexity feel simple and web accessibility that includes everyone. At iBASEt, I built and led a small UI/UX team from zero, embedding real UX culture and transforming manufacturing workflows for faster, frictionless daily operations in aerospace & defense.</p>
+      <p>I've driven similar impact at Dun & Bradstreet, Realogy, and more—speeding enterprise tasks and proving UX's ROI. Through Inner Spark Media, I consult strategically, guiding small businesses on direction, IA, accessibility, and AI integration (agent flows that go way beyond chat to automate decisions and augment work).</p>
+      <p>I turn complex problems into clear, efficient solutions users love. Let's talk if you need a seasoned UX leader who delivers results.</p>
+
+      <h3>Core Specializations</h3>
+      <ul>
+        <li>User Research</li>
+        <li>Information Architecture</li>
+        <li>Accessibility Design (WCAG)</li>
+        <li>Usability Testing</li>
+        <li>Wireframing & Prototyping</li>
+        <li>Interaction Design</li>
+        <li>Content Strategy</li>
+        <li>Design Systems</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="featured" style="background:#f8f9fa;">
+    <h2>Featured Work</h2>
+    <div class="section-content">
+      <h3>Case Studies</h3>
+
+      <div class="project">
+        <h4>D&B Hoovers Redesign</h4>
+        <div class="tags">UX/UI Design • AI Integration | AI Search Accessibility Figma Enterprise SaaS</div>
+        <p>Envisioning an AI-Driven, Accessible Future for Business Intelligence. Redesigning the search experience to improve time-to-insight by up to 65%.</p>
+      </div>
+
+      <div class="project">
+        <h4>Realogy Leads Engine Redesign</h4>
+        <div class="tags">UX/UI Design • Enterprise SaaS | Enterprise UX Information Architecture Mobile Design Usability Testing</div>
+        <p>Complete redesign of a lead management platform serving 50K+ daily leads for real estate brokers across major brands. Reduced task completion time by 40% and increased user satisfaction by 45%.</p>
+      </div>
+
+      <div class="project">
+        <h4>Revamping iBASEt's MES System</h4>
+        <div class="tags">UX/UI Design • Enterprise Software | UX Design Enterprise Software Usability Axure RP</div>
+        <p>Transforming a '90s-era Windows client into a streamlined, user-centric web platform for aerospace and defense manufacturing.</p>
+      </div>
+
+      <div class="project">
+        <h4>iBASEt Unit Info App: Mobile Workflow for Shop Floor Technicians</h4>
+        <div class="tags">UX/UI Design • Mobile App | UX Design Mobile Enterprise Software Manufacturing</div>
+        <p>Mobile solution for shop floor technicians in aerospace/defense manufacturing, enabling barcode scanning and on-the-spot part actions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="section-content">
+      <p><strong>Mike Binder</strong> — <a href="https://www.linkedin.com/in/innerspark/" target="_blank" style="color:var(--primary);">View full profile on LinkedIn</a></p>
+      <button class="btn" style="margin:1rem 0;">Download CV</button>
+
+      <h3>Professional Experience</h3>
+      <div class="experience">
+        <h4>Sr. UX Designer</h4>
+        <p class="date-company">Jul 2022 – March 2026 · Dun & Bradstreet · Full-time · Austin, Texas, United States · Remote</p>
+        <ul>
+          <li>Led user research and multiple high-impact design initiatives for D&B Hoovers...</li>
+          <li>Established organization-wide accessibility guidelines and chaired a dedicated accessibility working group...</li>
+          <li>Served as a key member of the Design System Governance Board...</li>
+          <li>Mentored designers and cross-functional teams on WCAG accessibility standards...</li>
+          <li>Co-led enterprise-wide AI initiatives...</li>
+        </ul>
+      </div>
+
+      <!-- Add the other experiences similarly; abbreviated here for space. Paste full from earlier scan if needed -->
+
+      <h3>Recommendations</h3>
+      <!-- Add the 7 recommendations here in blockquote or p format, matching scan -->
+
+      <h3>Skills</h3>
+      <!-- Categories: Design, Development, Tools, Mobile Design – use dl/dt/dd or h4 + ul -->
+
+      <h3>Education</h3>
+      <p>Bachelor of Science in Interactive Media Design – 2006 – Art Institute of Southern California, Orange County</p>
+    </div>
+  </section>
+
+  <section id="contact" style="background:#f8f9fa;">
+    <h2>Get in Touch</h2>
+    <div class="section-content" style="text-align:center;">
+      <h3>Let's create something meaningful together.</h3>
+      <p>Whether you have a project in mind or just want to chat about UX design, accessibility, or information architecture, I'd love to hear from you.</p>
+
+      <% if (success) { %>
+        <p class="success-msg">Thanks! Your message was sent successfully.</p>
+      <% } %>
+
+      <form action="/contact" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="message" rows="5" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:mike@innersparkmedia.com">mike@innersparkmedia.com</a></p>
+        <p><strong>Phone:</strong> 760.208.0433</p>
+        <p><strong>Location:</strong> Austin, TX</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
