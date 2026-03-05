@@ -23,18 +23,21 @@ const DBHooversCaseStudy = () => {
         </button>
 
         {/* Logo Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-full bg-white rounded-3xl shadow-md border border-neutral-100 py-20 px-8 flex justify-center items-center mb-16"
-        >
-          <img 
-            src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/46e8caff7078f4a57fb52353392ba38a.png" 
-            alt="Dun & Bradstreet logo" 
-            className="w-full max-w-sm md:max-w-md object-contain"
-          />
-        </motion.div>
+
+        <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 bg-white flex items-center justify-center relative shadow-sm">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }} 
+            animate={{ opacity: 1, scale: 1 }} 
+            transition={{ duration: 1, delay: 0.2 }} 
+            className="w-full h-full flex items-center justify-center p-12 md:p-24 lg:p-32 bg-white"
+          >
+            <img 
+              src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/46e8caff7078f4a57fb52353392ba38a.png" 
+              alt="Dun & Bradstreet logo" 
+              className="max-w-full max-h-full object-contain" 
+            />
+          </motion.div>
+        </div>
 
         {/* Title Section */}
         <motion.div
