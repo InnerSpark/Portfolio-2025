@@ -32,15 +32,6 @@ function App() {
   return (
     <>
       <Helmet>
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVGF51YLDC"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-KVGF51YLDC');
-        </script>
         <title>Mike Binder | UX Designer & Strategist – Inner Spark Media Portfolio | Austin TX</title>
         <meta name="description" content="Mike Binder – UX Designer specializing in accessibility (WCAG), information architecture, enterprise SaaS redesigns, and AI-integrated experiences. View portfolio case studies from Dun & Bradstreet, Realogy, iBASEt. Austin, TX." />
 
@@ -55,6 +46,15 @@ function App() {
         <meta name="twitter:image" content="https://innerspark.studio/img/og-image.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVGF51YLDC"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KVGF51YLDC');
+      </script>
       <BrowserRouter>
         <div className="min-h-screen bg-neutral-50 text-neutral-900">
           <Routes>
