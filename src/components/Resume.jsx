@@ -107,6 +107,20 @@ const Resume = () => {
 
   const recommendations = [
     {
+      name: 'Edward Garaña',
+      date: 'March 5, 2026',
+      relationship: 'Edward managed Mike directly',
+      text: "I've had the good fortune of working with Mike for four years. During this time, he has demonstrated his ability to take on new challenges, work outside his comfort zone, and proven to be an innovative UX Designer. Time and time again, Mike has shown he is someone that is willing to take charge and lead initiatives - with minimal direction needed. This was especially true as he helped lead the effort to overhaul our accessibility compliance process across multiple business units.\n\nMike is also always willing to take time to provide counsel and guidance to anyone who needs it, he is a great partner to have in a brainstorming meeting, and his wide ranging knowledge of innovations in the tech space were great to have as we looked to develop future facing capabilities within our products.\n\nMike is a savvy UX Designer that would be a good addition to any team, especially those looking to up their game in innovation, accessibility, and designing forward thinking products."
+    },
+    {
+      name: "Becky Kelderman",
+      title: "Creating operational efficiency and increasing margins one customer at a time.",
+      date: "March 4, 2026",
+      relationship: "Worked with Mike but on different teams",
+      text: "I was on the sales team and Mike was leading the charge of our new UX. Mike was open and collaborative to understand our prospects and client needs, ensuring he knew end user specific needs and designing a solution that was both aesthetically pleasing and technically functional. Mike led the group to design, test and implement. He was great to work with, innovative, and focus on results. I recommend Mike to lead similar teams or can excel as an individual contributor",
+      source: "LinkedIn"
+    },
+    {
       name: 'Marco Zuniga',
       date: 'February 26, 2026',
       relationship: 'worked with Mike on the same team',
