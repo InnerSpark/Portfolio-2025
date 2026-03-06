@@ -89,19 +89,69 @@ const Resume = () => {
   const skillCategories = [
     {
       category: 'Design',
-      skills: ['User Experience (UX)', 'Interaction Design', 'User Interface (UI)', 'Information Architecture', 'Wireframing', 'Prototyping', 'Design Systems']
+      skills: [
+        'Ideation',
+        'Concept Development',
+        'Information Architecture',
+        'Design Systems',
+        'Wireframing',
+        'Low fidelity Prototyping',
+        'High Fidelity Prototyping',
+        'Figma',
+        'Sketch',
+        'Adobe XD',
+        'Typography',
+        'Color Theory',
+        'Visual Hierarchy',
+        'Layout Design',
+        'Mobile-First Design',
+        'Responsive Design',
+        'Branding',
+        'Style Guides',
+        'Accessibility (ADA/WCAG Standards)'
+      ]
     },
     {
-      category: 'Development',
-      skills: ['HTML/CSS', 'JavaScript (Basic)', 'Webflow', 'React (Familiarity)', 'Git/Version Control']
+      category: 'Technical',
+      skills: [
+        'HTML',
+        'CSS (Responsive Design)',
+        'JavaScript',
+        'PHP',
+        'Ruby on Rails',
+        'XML',
+        'Node.js)',
+        'Figma Prototyping',
+        'Axure prototyping',
+        'Adobe Photoshop',
+        'Adobe Illustrator',
+        'Adobe InDesign',
+        'Adobe Dreamweaver',
+        'Component Libraries',
+        'Design Tokens',
+        'GitHub',
+        'Storybook'
+      ]
     },
     {
-      category: 'Tools',
-      skills: ['Figma', 'Sketch', 'Adobe Creative Suite', 'InVision', 'Jira/Confluence', 'Miro']
-    },
-    {
-      category: 'Mobile Design',
-      skills: ['iOS Human Interface Guidelines', 'Material Design', 'Responsive Web Design', 'Mobile-First Strategy']
+      category: 'Research & Strategy',
+      skills: [
+        'Quantitative Research',
+        'Qualitative Research',
+        'User Interviews',
+        'Usability Testing',
+        'Heuristic Evaluation',
+        'Persona Creation',
+        'Journey Mapping',
+        'User Flows',
+        'Task Analysis',
+        'Data & Content Review',
+        'User Stories',
+        'Requirements Gathering',
+        'A/B Testing',
+        'Feedback Analysis',
+        'Competitive Analysis'
+      ]
     }
   ];
 
