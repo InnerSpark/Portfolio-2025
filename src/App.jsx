@@ -32,6 +32,15 @@ function App() {
   return (
     <>
       <Helmet>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVGF51YLDC"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-KVGF51YLDC');
+        </script>
         <title>Mike Binder | UX Designer & Strategist – Inner Spark Media Portfolio | Austin TX</title>
         <meta name="description" content="Mike Binder – UX Designer specializing in accessibility (WCAG), information architecture, enterprise SaaS redesigns, and AI-integrated experiences. View portfolio case studies from Dun & Bradstreet, Realogy, iBASEt. Austin, TX." />
 
