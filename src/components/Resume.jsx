@@ -187,30 +187,6 @@ const Resume = () => {
       date: 'June 27, 2019',
       relationship: "was senior to Mike but didn't manage Mike directly",
       text: "Mike is passionate about creating aesthetically-pleasing and highly-functional user interfaces. He built up a small UI/UX team at iBASEt and led the team from project initiation through initial release and beyond. Mike's successful leadership of his team helped establish UI/UX as an important part of iBASEt culture. Mike puts a lot of thought into design decisions. He listens carefully to feedback from others and uses their inputs to refine his designs appropriately. Mike collaborates well with software developers, product managers, and other UI/UX designers. I highly recommend Mike for UI/UX work."
-    },
-    {
-      name: 'Tiquet Wan',
-      date: 'November 14, 2012',
-      relationship: 'worked with Mike but on different teams',
-      text: "It is without hesitation that I write this recommendation. Mike is a true gentlemen and a professional of his trait. He is a creative and driven individual who simply refuse to miss a deadline or produce inferior product. His style in precision and fine tuning the design is to be admired, the way he sees and tackles each piece displays his knack for identifying the smallest details while delivering breath-taking visuals each and every time. That combination of values and skills sets has led to a very successful body of work and it would be my pleasure to work with him again at some point in the future."
-    },
-    {
-      name: 'Don Hansen',
-      date: 'January 27, 2012',
-      relationship: 'worked with Mike on the same team',
-      text: "I've worked with Mike for a little over two years now. He helped elevate the web application I was building to the next level. The site took on a truly proffesional look and our clients took notice right from the start. Mike was easy to work with and took a high level of ownership of the site. He truly feels the look of the site reflects on him, and in turn ensures the site is perfect. Any site I build from now on I know I am requesting Mike to be the designer assigned to the project."
-    },
-    {
-      name: 'Chris Hsiung',
-      date: 'January 27, 2012',
-      relationship: 'worked with Mike on the same team',
-      text: "Mike is a quick learner and was able to pick up WPF xaml quickly despite having no prior experience. He is a perfectionist at heart and will strive to give you exactly what you're looking for, even if you don't know what it is!"
-    },
-    {
-      name: 'David Spolarich',
-      date: 'February 17, 2011',
-      relationship: "was senior to Mike but didn't manage Mike directly",
-      text: "Mike was able to join our team and quickly get up to speed on what we were trying to accomplish. Not only did Mike create images and design page layouts, but he also assisted in bringing new CSS concepts to us to help optimize our product/website. Mike's overall knowledge and design concepts have proven to be very useful turning our code into usable functionality on the web."
     }
   ];
 
