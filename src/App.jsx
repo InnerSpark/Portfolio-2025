@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Mike Binder | UX Designer & Strategist – Inner Spark Media Portfolio | Austin TX</title>
+        <title>Mike Binder | UX Designer & Strategist – Inner Spark Portfolio | Austin TX</title>
         <meta name="description" content="Mike Binder – UX Designer specializing in accessibility (WCAG), information architecture, enterprise SaaS redesigns, and AI-integrated experiences. View portfolio case studies from Dun & Bradstreet, Realogy, iBASEt. Austin, TX." />
 
         <meta property="og:title" content="Mike Binder – UX Designer Portfolio | Inner Spark Media" />
