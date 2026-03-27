@@ -1,17 +1,11 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ChevronDown, ChevronUp, ArrowLeft, Users, Clock, Wrench, CheckCircle, Target, AlertCircle, Lightbulb, BarChart, Monitor, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
 
-const DBHooversCaseStudy = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+const DBHooversCaseStudy = ({ onBack }) => {
 
   const [expandedSections, setExpandedSections] = useState({
     challenge: true,
@@ -73,7 +67,7 @@ const DBHooversCaseStudy = () => {
       {/* Back Button */}
       <div className="sticky top-20 z-40 bg-neutral-50/95 backdrop-blur-sm border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-4">
-          <Button onClick={() => navigate('/')} variant="ghost" className="gap-2 hover:bg-neutral-100">
+          <Button onClick={onBack} variant="ghost" className="gap-2 hover:bg-neutral-100">
             <ArrowLeft size={16} />
             Back to Projects
           </Button>
@@ -349,7 +343,7 @@ const DBHooversCaseStudy = () => {
       {/* Back CTA */}
       <section className="py-16 px-6 lg:px-12 bg-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto text-center">
-          <Button onClick={() => navigate('/')} size="lg" className="gap-2">
+          <Button onClick={onBack} size="lg" className="gap-2">
             <ArrowLeft size={16} />
             View More Projects
           </Button>

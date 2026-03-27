@@ -10,9 +10,6 @@ import Resume from '@/components/Resume';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
-import PasswordProtectedRoute from '@/components/PasswordProtectedRoute';
-import PasswordPrompt from '@/components/PasswordPrompt';
-import DBHooversCaseStudy from '@/components/DBHooversCaseStudy';
 
 const MainLayout = () => (
   <>
@@ -50,8 +47,6 @@ function App() {
         <div className="min-h-screen bg-neutral-50 text-neutral-900">
           <Routes>
             <Route path="/" element={<MainLayout />} />
-            <Route path="/password-prompt" element={<PasswordPrompt />} />
-            <Route path="/db-hoovers-case-study" element={<DBHooversCaseStudy />} />
           </Routes>
           <Toaster />
         </div>
