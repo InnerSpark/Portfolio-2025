@@ -360,7 +360,7 @@ const RealogyCaseStudy = ({
                 </ul>
               </div>
               <div>
-                <img src="https://images.unsplash.com/photo-1540612597331-63c67ea382fc" alt="UX research session with sticky notes and user journey mapping" className="w-full h-64 object-cover rounded-xl border border-neutral-200" />
+                <img src="https://images.unsplash.com/photo-1540612597331-63c67ea382fc" alt="UX research session with sticky notes and user journey mapping" loading="lazy" className="w-full h-64 object-cover rounded-xl border border-neutral-200" />
               </div>
             </div>
 
@@ -379,7 +379,7 @@ const RealogyCaseStudy = ({
           <Section id="ideation" title="Ideation & Design Process" icon={Lightbulb}>
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
-                <img src="https://images.unsplash.com/photo-1578401057158-0e58789f5947" alt="Design process whiteboard with wireframes and user flow diagrams" className="w-full h-64 object-cover rounded-xl border border-neutral-200 mb-6" />
+                <img src="https://images.unsplash.com/photo-1578401057158-0e58789f5947" alt="Design process whiteboard with wireframes and user flow diagrams" loading="lazy" className="w-full h-64 object-cover rounded-xl border border-neutral-200 mb-6" />
               </div>
               <div>
                 <h4 className="font-bold text-neutral-900 mb-4">Our Approach</h4>
@@ -471,7 +471,7 @@ const RealogyCaseStudy = ({
           }} transition={{
             duration: 0.3
           }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white mb-4">
-              <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1ced0a6bedff3dc176710d4670abcd87.png" alt="Realogy Leads Engine Manage Leads dashboard showing dark navy header, sidebar filters, and leads list interface" className="w-full h-auto object-cover" />
+              <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1ced0a6bedff3dc176710d4670abcd87.png" alt="Realogy Leads Engine Manage Leads dashboard showing dark navy header, sidebar filters, and leads list interface" loading="lazy" className="w-full h-auto object-cover" />
             </motion.div>
           </Section>
 
@@ -486,7 +486,7 @@ const RealogyCaseStudy = ({
           }} transition={{
             duration: 0.3
           }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white">
-              <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/f896660ce789d813ba284d4ae060d849.png" alt="Realogy Leads Engine interface showing lead details screen with contact information and event logs" className="w-full h-auto object-cover" />
+              <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/f896660ce789d813ba284d4ae060d849.png" alt="Realogy Leads Engine interface showing lead details screen with contact information and event logs" loading="lazy" className="w-full h-auto object-cover" />
             </motion.div>
           </Section>
 
@@ -494,7 +494,7 @@ const RealogyCaseStudy = ({
           <Section id="distribution" title="Intelligent Lead Distribution Rules" icon={Layout}>
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white order-2 md:order-1">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1e6b6be4260b73b8befdc5b3403a6ec5.png" alt="Learning Rule Configuration" className="w-full h-auto object-cover" />
+                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1e6b6be4260b73b8befdc5b3403a6ec5.png" alt="Learning Rule Configuration" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
               <div className="order-1 md:order-2">
                 <p className="text-neutral-600 leading-relaxed">
@@ -513,7 +513,7 @@ const RealogyCaseStudy = ({
                 </p>
               </div>
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white order-2">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/9a852abf54540e3159621c15d788dfcd.png" alt="User Management System" className="w-full h-auto object-cover" />
+                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/9a852abf54540e3159621c15d788dfcd.png" alt="User Management System" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
             </div>
           </Section>
@@ -522,7 +522,7 @@ const RealogyCaseStudy = ({
           <Section id="leadCreation" title="Streamlined Lead Intake Process" icon={Target}>
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white order-2 md:order-1">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/a0c74fb641702e340cf745e4f986c0ef.png" alt="Lead Creation & Management" className="w-full h-auto object-cover" />
+                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/a0c74fb641702e340cf745e4f986c0ef.png" alt="Lead Creation & Management" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
               <div className="order-1 md:order-2">
                 <p className="text-neutral-600 leading-relaxed">
