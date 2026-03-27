@@ -51,14 +51,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainLayout />} />
             <Route path="/password-prompt" element={<PasswordPrompt />} />
-            <Route 
-              path="/db-hoovers-case-study" 
-              element={
-                <PasswordProtectedRoute>
-                  <DBHooversCaseStudy />
-                </PasswordProtectedRoute>
-              } 
-            />
+            <Route path="/db-hoovers-case-study" element={<DBHooversCaseStudy />} />
           </Routes>
           <Toaster />
         </div>
