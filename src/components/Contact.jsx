@@ -75,13 +75,13 @@ const Contact = () => {
 
             <div className="space-y-6">
               <a 
-                href="mailto:mike@innersparkmedia.com" 
+                href="mailto:mike@innerspark.studio" 
                 className="flex items-center gap-4 text-neutral-300 hover:text-white transition-colors group"
               >
                 <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center group-hover:bg-neutral-700 transition-colors">
                   <Mail size={20} />
                 </div>
-                <span className="text-lg">mike@innersparkmedia.com</span>
+                <span className="text-lg">mike@innerspark.studio</span>
               </a>
               
               <a 
