@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import RealogyCaseStudy from '@/components/RealogyCaseStudy';
 import IBASEtCaseStudy from '@/components/iBASEtCaseStudy';
 import IBASEtMESCaseStudy from '@/components/IBASEtMESCaseStudy';
+import DBHooversCaseStudy from '@/components/DBHooversCaseStudy';
 
 const Projects = () => {
   const ref = useRef(null);
@@ -17,12 +18,7 @@ const Projects = () => {
   const navigate = useNavigate();
 
   const handleProjectClick = (projectId) => {
-    if (projectId === 'db-hoovers') {
-      navigate('/db-hoovers-case-study');
-      return;
-    }
-
-    if (projectId === 'realogy' || projectId === 'ibaset' || projectId === 'ibaset-mes') {
+    if (projectId === 'db-hoovers' || projectId === 'realogy' || projectId === 'ibaset' || projectId === 'ibaset-mes') {
       setSelectedProject(projectId);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -76,6 +72,10 @@ const Projects = () => {
       image: '/img/ibaset_unit_info_hero_home.png'
     }
   ];
+
+  if (selectedProject === 'db-hoovers') {
+    return <DBHooversCaseStudy onBack={handleBackToProjects} />;
+  }
 
   if (selectedProject === 'realogy') {
     return <RealogyCaseStudy onBack={handleBackToProjects} />;
