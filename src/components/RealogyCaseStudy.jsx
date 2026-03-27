@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -9,6 +9,14 @@ import { Button } from '@/components/ui/button';
 const RealogyCaseStudy = ({
   onBack
 }) => {
+  useEffect(() => {
+    const h1 = document.querySelectorAll('h1')[1];
+    if (h1) {
+      const absoluteTop = h1.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: absoluteTop - 180, behavior: 'instant' });
+    }
+  }, []);
+
   const [expandedSections, setExpandedSections] = useState({
     challenge: true,
     research: true,
@@ -180,8 +188,8 @@ const RealogyCaseStudy = ({
               Revamping Realogy's Leads Engine: Streamlining Lead Management for Real Estate Brokers
             </h1>
             
-            {/* Logo Hero Image Container */}
-            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 bg-white flex items-center justify-center relative shadow-sm">
+            {/* Hero Image */}
+            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 relative shadow-sm">
               <motion.div initial={{
               opacity: 0,
               scale: 0.95
@@ -191,8 +199,8 @@ const RealogyCaseStudy = ({
             }} transition={{
               duration: 1,
               delay: 0.2
-            }} className="w-full h-full flex items-center justify-center p-12 md:p-24 lg:p-32">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/00c8b266d393ac2385a338801d39590d.jpg" alt="Official Realogy Logo" className="max-w-full max-h-full object-contain" />
+            }} className="w-full h-full">
+                <img src="/img/pexels-startup-stock-photos-7369.jpg" alt="Team collaborating on UX strategy" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 

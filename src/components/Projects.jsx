@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -17,10 +17,12 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const navigate = useNavigate();
 
+
   const handleProjectClick = (projectId) => {
     if (projectId === 'db-hoovers' || projectId === 'realogy' || projectId === 'ibaset' || projectId === 'ibaset-mes') {
+      sessionStorage.setItem('returnScrollY', window.scrollY);
+      window.history.pushState({ caseStudy: projectId }, '', `#${projectId}`);
       setSelectedProject(projectId);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       toast({
         title: '🚧 This feature isn\'t implemented yet—but don\'t worry! You can request it in your next prompt! 🚀',
@@ -28,14 +30,22 @@ const Projects = () => {
     }
   };
 
-  const handleBackToProjects = () => {
-    setSelectedProject(null);
-    setTimeout(() => {
-      const projectsSection = document.getElementById('projects');
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => {
+    const handlePopState = () => {
+      if (selectedProject) {
+        setSelectedProject(null);
+        const savedY = parseInt(sessionStorage.getItem('returnScrollY') || '0');
+        setTimeout(() => {
+          window.scrollTo({ top: savedY, behavior: 'instant' });
+        }, 0);
       }
-    }, 100);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [selectedProject]);
+
+  const handleBackToProjects = () => {
+    window.history.back();
   };
 
   const projects = [
@@ -80,7 +90,7 @@ const Projects = () => {
   if (selectedProject === 'realogy') {
     return <RealogyCaseStudy onBack={handleBackToProjects} />;
   }
-  
+
   if (selectedProject === 'ibaset') {
     return <IBASEtCaseStudy onBack={handleBackToProjects} />;
   }

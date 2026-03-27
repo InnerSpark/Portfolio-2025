@@ -1,11 +1,19 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ChevronDown, ChevronUp, ArrowLeft, Users, Clock, Wrench, CheckCircle, Target, AlertCircle, Lightbulb, BarChart, Monitor, Search } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const DBHooversCaseStudy = ({ onBack }) => {
+
+  useEffect(() => {
+    const h1 = document.querySelectorAll('h1')[1];
+    if (h1) {
+      const absoluteTop = h1.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: absoluteTop - 180, behavior: 'instant' });
+    }
+  }, []);
 
   const [expandedSections, setExpandedSections] = useState({
     challenge: true,
@@ -85,10 +93,10 @@ const DBHooversCaseStudy = ({ onBack }) => {
               Transforming a legacy B2B sales intelligence platform into a modern, AI-powered experience that makes prospecting faster and more accessible for everyone.
             </p>
 
-            {/* Logo Hero Image Container */}
-            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 bg-white flex items-center justify-center relative shadow-sm">
-              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }} className="w-full h-full flex items-center justify-center p-12 md:p-24 lg:p-32 bg-white">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/46e8caff7078f4a57fb52353392ba38a.png" alt="Dun & Bradstreet logo" className="max-w-full max-h-full object-contain" />
+            {/* Hero Image */}
+            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 relative shadow-sm">
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }} className="w-full h-full">
+                <img src="/img/pexels-divinetechygirl-1181343.jpg" alt="UX designer reviewing wireframes and user flows on a whiteboard" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 

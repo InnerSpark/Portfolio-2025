@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -9,6 +9,14 @@ import { Button } from '@/components/ui/button';
 const IBASEtCaseStudy = ({
   onBack
 }) => {
+  useEffect(() => {
+    const h1 = document.querySelectorAll('h1')[1];
+    if (h1) {
+      const absoluteTop = h1.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: absoluteTop - 180, behavior: 'instant' });
+    }
+  }, []);
+
   const [expandedSections, setExpandedSections] = useState({
     challenge: true,
     research: true,
@@ -94,8 +102,8 @@ const IBASEtCaseStudy = ({
               iBASEt Unit Info App: Mobile Workflow for Shop Floor Technicians
             </h1>
             
-            {/* Logo Hero Image Container - Updated Background to bg-white */}
-            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 bg-white flex items-center justify-center relative shadow-sm">
+            {/* Hero Image */}
+            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 relative shadow-sm">
               <motion.div initial={{
               opacity: 0,
               scale: 0.95
@@ -105,8 +113,8 @@ const IBASEtCaseStudy = ({
             }} transition={{
               duration: 1,
               delay: 0.2
-            }} className="w-full h-full flex items-center justify-center p-12 md:p-24 lg:p-32 bg-white">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/ibase_t_logo-9BL7c.jpg" alt="iBASEt Logo" className="max-w-full max-h-full object-contain" />
+            }} className="w-full h-full">
+                <img src="/img/pexels-yankrukov-7793696.jpg" alt="Designer sketching on sticky notes during ideation session" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
