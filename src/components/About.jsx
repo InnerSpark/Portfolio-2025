@@ -9,7 +9,7 @@ const About = () => {
     margin: '-100px'
   });
   const skills = ['User Research', 'Information Architecture', 'Accessibility Design (WCAG)', 'Usability Testing', 'Wireframing & Prototyping', 'Interaction Design', 'Content Strategy', 'Design Systems'];
-  return <section id="about" aria-labelledby="about-heading" className="py-32 px-6 lg:px-12 bg-white">
+  return <section id="about" aria-labelledby="about-heading" tabIndex="-1" className="py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div ref={ref} initial={{
         opacity: 0,
@@ -21,7 +21,7 @@ const About = () => {
         duration: 0.8
       }}>
           <h2 id="about-heading" className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-4">
-            About Me
+            About
           </h2>
           
           <div className="grid md:grid-cols-2 gap-16 items-start">

@@ -100,7 +100,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" aria-labelledby="projects-heading" className="py-32 px-6 lg:px-12 bg-neutral-50">
+    <section id="projects" aria-labelledby="projects-heading" tabIndex="-1" className="py-32 px-6 lg:px-12 bg-neutral-50">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -111,7 +111,7 @@ const Projects = () => {
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
               <h2 id="projects-heading" className="text-sm font-bold text-neutral-500 uppercase tracking-widest mb-2">
-                Featured Work
+                Projects
               </h2>
               <h3 className="text-3xl md:text-4xl font-bold text-neutral-900">
                 Case Studies
