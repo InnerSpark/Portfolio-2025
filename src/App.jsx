@@ -32,8 +32,8 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>Mike Binder | UX Designer & Strategist – Inner Spark Portfolio | Austin TX</title>
-        <meta name="description" content="Mike Binder – UX Designer specializing in accessibility (WCAG), information architecture, enterprise SaaS redesigns, and AI-integrated experiences. View portfolio case studies from Dun & Bradstreet, Realogy, iBASEt. Austin, TX." />
+        <title>Mike Binder | Senior UX Leader – Enterprise Data Systems, Accessibility & AI UX | Austin TX</title>
+        <meta name="description" content="Mike Binder – Senior UX Leader with 25 years designing enterprise B2B software. Specializing in accessibility (WCAG), AI UX, and information architecture. Case studies from Dun & Bradstreet, iBASEt, Realogy. Austin, TX." />
 
         <meta property="og:title" content="Mike Binder – UX Designer Portfolio | Inner Spark Media" />
         <meta property="og:description" content="Specializing in WCAG accessibility, information architecture, enterprise UX, and AI-driven design. Case studies from D&B Hoovers, Realogy, iBASEt." />
@@ -51,14 +51,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainLayout />} />
             <Route path="/password-prompt" element={<PasswordPrompt />} />
-            <Route 
-              path="/db-hoovers-case-study" 
-              element={
-                <PasswordProtectedRoute>
-                  <DBHooversCaseStudy />
-                </PasswordProtectedRoute>
-              } 
-            />
+            <Route path="/db-hoovers-case-study" element={<DBHooversCaseStudy />} />
           </Routes>
           <Toaster />
         </div>
