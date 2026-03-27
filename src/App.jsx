@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -28,6 +28,24 @@ const MainLayout = () => (
 );
 
 function App() {
+  useEffect(() => {
+    const hash = window.location.hash?.replace('#', '');
+    const stored = sessionStorage.getItem('scrollTarget');
+    const target = hash || stored;
+
+    if (target) {
+      sessionStorage.removeItem('scrollTarget');
+      setTimeout(() => {
+        const el = document.getElementById(target);
+        if (el) {
+          const navHeight = 80;
+          const top = el.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <>
       <Helmet>
