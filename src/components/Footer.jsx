@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-neutral-600">
-            © {currentYear} Inner Spark Media. All rights reserved.
+            © {currentYear} Mike Binder. All rights reserved.
           </p>
           <p className="text-sm text-neutral-500">
             Designed with passion and attention to detail

@@ -43,7 +43,7 @@ const Header = () => {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            Inner Spark Media
+            Mike Binder
           </motion.button>
 
           <nav className="hidden md:flex items-center gap-8">
