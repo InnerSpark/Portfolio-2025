@@ -25,14 +25,14 @@ const Hero = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }} 
             className="flex-[1.2] text-center md:text-left order-1 w-full"
           >
-            <motion.h2 
-              className="text-base md:text-lg font-medium text-neutral-500 mb-4 tracking-widest uppercase" 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }} 
+            <motion.p
+              className="text-base md:text-lg font-medium text-neutral-500 mb-4 tracking-widest uppercase"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               SENIOR UX LEADER
-            </motion.h2>
+            </motion.p>
 
             <motion.h1 
               className="text-[clamp(2rem,6vw,4.5rem)] font-extrabold tracking-tight text-neutral-900 mb-6 leading-[1.1] whitespace-nowrap" 

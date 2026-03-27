@@ -137,9 +137,10 @@ const Projects = () => {
                     {/* Image Section */}
                     <div className="lg:col-span-2 h-64 lg:h-auto overflow-hidden relative bg-neutral-900">
                       <div className="absolute inset-0 bg-neutral-900/10 z-10 group-hover:bg-transparent transition-colors duration-500" />
-                      <img 
-                        src={project.image} 
-                        alt={`${project.title} preview`} 
+                      <img
+                        src={project.image}
+                        alt={`${project.title} preview`}
+                        loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90"
                       />
                     </div>

@@ -275,7 +275,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
                 Replaced dense data tables with scannable, prioritized widgets. Users can now see real-time statuses and essential metrics at a glance.
               </p>
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/db91f14220f5de71fe1f3bf5afe24e4a.png" alt="Dashboard view with card-based layout" className="w-full h-auto object-cover" />
+                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/db91f14220f5de71fe1f3bf5afe24e4a.png" alt="Dashboard view with card-based layout" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
             </div>
 
@@ -287,10 +287,10 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-lg bg-white">
-                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/f4c103ddbf49534063828742b7bc66de.png" alt="Work order interface for production monitoring" className="w-full h-auto object-cover" />
+                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/f4c103ddbf49534063828742b7bc66de.png" alt="Work order interface for production monitoring" loading="lazy" className="w-full h-auto object-cover" />
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-lg bg-white">
-                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/ecd7328a8a93ec486e4f01633eb0d2e2.png" alt="Work order with action buttons and right-side panel" className="w-full h-auto object-cover" />
+                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/ecd7328a8a93ec486e4f01633eb0d2e2.png" alt="Work order with action buttons and right-side panel" loading="lazy" className="w-full h-auto object-cover" />
                 </motion.div>
               </div>
             </div>
@@ -303,10 +303,10 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
               </p>
               <div className="grid md:grid-cols-2 gap-6">
                 <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-lg bg-white">
-                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/bedcafa7d15ca03c089c0c41b62bb4dc.png" alt="Detailed work order screen" className="w-full h-auto object-cover" />
+                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/bedcafa7d15ca03c089c0c41b62bb4dc.png" alt="Detailed work order screen" loading="lazy" className="w-full h-auto object-cover" />
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-lg bg-white">
-                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1e7fe10de18acf06e63a1885e4f58063.png" alt="Work order detail screen with comprehensive information" className="w-full h-auto object-cover" />
+                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1e7fe10de18acf06e63a1885e4f58063.png" alt="Work order detail screen with comprehensive information" loading="lazy" className="w-full h-auto object-cover" />
                 </motion.div>
               </div>
             </div>
@@ -318,7 +318,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
                 Introduced embedded messaging interfaces directly within context views, allowing operators to communicate about specific units without leaving their workflow.
               </p>
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white max-w-3xl mx-auto">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/861df1ea2c0001139e754cecc68c5663.png" alt="Messaging interface within the platform" className="w-full h-auto object-cover" />
+                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/861df1ea2c0001139e754cecc68c5663.png" alt="Messaging interface within the platform" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
             </div>
           </Section>
