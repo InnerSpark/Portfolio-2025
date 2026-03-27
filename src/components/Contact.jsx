@@ -53,7 +53,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-32 px-6 lg:px-12 bg-neutral-900 text-white">
+    <section id="contact" aria-labelledby="contact-heading" className="py-32 px-6 lg:px-12 bg-neutral-900 text-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -63,7 +63,7 @@ const Contact = () => {
           className="grid md:grid-cols-2 gap-16"
         >
           <div>
-            <h2 className="text-sm font-medium text-neutral-400 uppercase tracking-wider mb-4">
+            <h2 id="contact-heading" className="text-sm font-medium text-neutral-400 uppercase tracking-wider mb-4">
               Get in Touch
             </h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">

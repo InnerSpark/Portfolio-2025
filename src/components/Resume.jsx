@@ -189,7 +189,7 @@ const Resume = () => {
   ];
 
   return (
-    <section id="resume" className="py-32 px-6 lg:px-12 bg-white">
+    <section id="resume" aria-labelledby="resume-heading" className="py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -199,7 +199,7 @@ const Resume = () => {
         >
           <div className="flex items-center justify-between mb-12">
             <div>
-              <h2 className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-2">
+              <h2 id="resume-heading" className="text-sm font-medium text-neutral-500 uppercase tracking-wider mb-2">
                 Resume
               </h2>
               <p className="text-3xl font-bold text-neutral-900">Mike Binder</p>

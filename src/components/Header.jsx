@@ -16,7 +16,8 @@ const Header = () => {
 
   const isStandalonePage = window.location.pathname === '/accessibility' || window.location.pathname === '/privacy';
 
-  const handleNavClick = (sectionId) => {
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
     if (isStandalonePage) {
       sessionStorage.setItem('scrollTarget', sectionId);
       window.location.href = '/';
@@ -29,7 +30,8 @@ const Header = () => {
     }
   };
 
-  const handleLogoClick = () => {
+  const handleLogoClick = (e) => {
+    e.preventDefault();
     if (isStandalonePage) {
       window.location.href = '/';
     } else {
@@ -55,20 +57,22 @@ const Header = () => {
       </a>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
-          <motion.button
+          <motion.a
+            href="/"
             onClick={handleLogoClick}
             className="text-xl font-bold tracking-tight text-neutral-900 hover:text-neutral-600 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
             Mike Binder
-          </motion.button>
+          </motion.a>
 
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item, index) => (
-              <motion.button
+              <motion.a
                 key={item.id}
-                onClick={() => handleNavClick(item.id)}
+                href={`#${item.id}`}
+                onClick={(e) => handleNavClick(e, item.id)}
                 className="text-sm font-medium text-neutral-600 hover:text-brand-blue transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -76,7 +80,7 @@ const Header = () => {
                 whileHover={{ y: -2 }}
               >
                 {item.label}
-              </motion.button>
+              </motion.a>
             ))}
           </nav>
 
@@ -84,6 +88,8 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden p-2 text-neutral-900 hover:text-brand-blue rounded-lg transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-nav-menu"
           >
             {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
           </button>
@@ -92,6 +98,7 @@ const Header = () => {
 
       {isMobileMenuOpen && (
         <motion.div
+          id="mobile-nav-menu"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
@@ -99,13 +106,14 @@ const Header = () => {
         >
           <nav className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-2">
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.id}
-                onClick={() => handleNavClick(item.id)}
+                href={`#${item.id}`}
+                onClick={(e) => handleNavClick(e, item.id)}
                 className="text-left py-3 px-4 text-sm font-medium text-neutral-600 hover:text-brand-blue hover:bg-neutral-50 rounded-lg transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 {item.label}
-              </button>
+              </a>
             ))}
           </nav>
         </motion.div>
