@@ -189,7 +189,7 @@ const Resume = () => {
   ];
 
   return (
-    <section id="resume" aria-labelledby="resume-heading" className="py-32 px-6 lg:px-12 bg-white">
+    <section id="resume" aria-labelledby="resume-heading" tabIndex="-1" className="py-32 px-6 lg:px-12 bg-white">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
