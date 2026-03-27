@@ -75,28 +75,28 @@ const Contact = () => {
 
             <div className="space-y-6">
               <a 
-                href="mailto:mike@innerspark.studio" 
-                className="flex items-center gap-4 text-neutral-300 hover:text-white transition-colors group"
+                href="mailto:mike@innerspark.studio"
+                className="flex items-center gap-4 text-neutral-300 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-lg"
               >
                 <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center group-hover:bg-neutral-700 transition-colors">
-                  <Mail size={20} />
+                  <Mail size={20} aria-hidden="true" />
                 </div>
                 <span className="text-lg">mike@innerspark.studio</span>
               </a>
               
               <a 
-                href="tel:7602080433" 
-                className="flex items-center gap-4 text-neutral-300 hover:text-white transition-colors group"
+                href="tel:7602080433"
+                className="flex items-center gap-4 text-neutral-300 hover:text-white transition-colors group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded-lg"
               >
                 <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center group-hover:bg-neutral-700 transition-colors">
-                  <Phone size={20} />
+                  <Phone size={20} aria-hidden="true" />
                 </div>
                 <span className="text-lg">760.208.0433</span>
               </a>
 
               <div className="flex items-center gap-4 text-neutral-300">
                 <div className="w-12 h-12 rounded-full bg-neutral-800 flex items-center justify-center">
-                  <MapPin size={20} />
+                  <MapPin size={20} aria-hidden="true" />
                 </div>
                 <span className="text-lg">Austin, TX</span>
               </div>
@@ -112,7 +112,7 @@ const Contact = () => {
                     type="text" 
                     id="name"
                     name="user_name"
-                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors"
+                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 text-white transition-colors"
                     placeholder="Jane Doe"
                     required
                   />
@@ -123,7 +123,7 @@ const Contact = () => {
                     type="email" 
                     id="email"
                     name="user_email"
-                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors"
+                    className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 text-white transition-colors"
                     placeholder="jane@example.com"
                     required
                   />
@@ -136,7 +136,7 @@ const Contact = () => {
                   type="text" 
                   id="subject"
                   name="subject"
-                  className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors"
+                  className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 text-white transition-colors"
                   placeholder="Project Inquiry"
                 />
               </div>
@@ -147,7 +147,7 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white text-white transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-neutral-900 border border-neutral-700 rounded-lg focus:outline-none focus:border-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 text-white transition-colors resize-none"
                   placeholder="Tell me about your project..."
                   required
                 />
@@ -156,7 +156,7 @@ const Contact = () => {
               <Button 
                 type="submit" 
                 size="lg" 
-                className="w-full bg-white text-neutral-900 hover:bg-neutral-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-white text-neutral-900 hover:bg-neutral-200 disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 disabled={isLoading}
               >
                 {isLoading ? 'Sending...' : 'Send Message'}

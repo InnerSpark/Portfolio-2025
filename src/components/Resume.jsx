@@ -217,7 +217,7 @@ const Resume = () => {
               className="gap-2 hover:bg-neutral-50 transition-colors"
               aria-label="Download Mike Binder's resume as PDF"
             >
-              <Download size={16} />
+              <Download size={16} aria-hidden="true" />
               <span className="hidden sm:inline">Download CV</span>
             </Button>
           </div>
@@ -277,14 +277,15 @@ const Resume = () => {
 
                       {job.showLinkedIn && (
                         <div className="mt-6 pt-4 border-t border-neutral-100">
-                          <a 
-                            href="https://www.linkedin.com/in/innerspark/" 
-                            target="_blank" 
+                          <a
+                            href="https://www.linkedin.com/in/innerspark/"
+                            target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 hover:text-neutral-600 transition-all group"
+                            aria-label="View Mike Binder's full LinkedIn profile"
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 hover:text-neutral-600 transition-all group focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 rounded"
                           >
                             <span>View full profile on LinkedIn</span>
-                            <ExternalLink size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                            <ExternalLink size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" aria-hidden="true" />
                           </a>
                         </div>
                       )}

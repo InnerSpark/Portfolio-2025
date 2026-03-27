@@ -127,7 +127,7 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + (index * 0.1) }}
-                className="w-full text-left group block focus:outline-none"
+                className="w-full text-left group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 aria-label={`View full case study for ${project.title}`}
               >
                 <div className="bg-white border border-neutral-200 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:border-neutral-300 group-focus-visible:ring-4 group-focus-visible:ring-neutral-200 group-focus-visible:outline-none relative">
@@ -151,9 +151,10 @@ const Projects = () => {
                           {project.category}
                         </span>
                         <div className="w-12 h-12 rounded-full bg-neutral-50 flex items-center justify-center border border-neutral-100 group-hover:bg-brand-blue group-hover:border-brand-blue transition-colors duration-300 flex-shrink-0">
-                          <ArrowUpRight 
-                            size={24} 
-                            className="text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" 
+                          <ArrowUpRight
+                            size={24}
+                            className="text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                            aria-hidden="true"
                           />
                         </div>
                       </div>
