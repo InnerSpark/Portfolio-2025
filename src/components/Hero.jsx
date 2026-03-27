@@ -14,7 +14,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20 pb-16 overflow-hidden">
+    <section aria-labelledby="hero-heading" className="min-h-screen flex items-center justify-center px-6 lg:px-12 pt-20 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-16">
           
@@ -34,7 +34,8 @@ const Hero = () => {
               SENIOR UX LEADER
             </motion.p>
 
-            <motion.h1 
+            <motion.h1
+              id="hero-heading"
               className="text-[clamp(2rem,6vw,4.5rem)] font-extrabold tracking-tight text-neutral-900 mb-6 leading-[1.1] whitespace-nowrap" 
               initial={{ opacity: 0, y: 20 }} 
               animate={{ opacity: 1, y: 0 }} 
@@ -52,12 +53,14 @@ const Hero = () => {
               25 years designing enterprise B2B software where complexity is the norm. Accessibility, AI UX, and information architecture that actually moves the needle.
             </motion.p>
 
-            <motion.button 
-              onClick={scrollToAbout} 
-              className="inline-flex items-center gap-3 text-neutral-900 hover:text-neutral-600 transition-colors group font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" 
-              initial={{ opacity: 0 }} 
-              animate={{ opacity: 1 }} 
-              transition={{ duration: 0.8, delay: 0.4 }} 
+            <motion.button
+              type="button"
+              onClick={scrollToAbout}
+              aria-label="Explore my work — scroll to case studies"
+              className="inline-flex items-center gap-3 text-neutral-900 hover:text-neutral-600 transition-colors group font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               whileHover={{ y: 2 }}
             >
               <span className="text-sm md:text-base uppercase tracking-wider">Explore Work</span>
