@@ -1,11 +1,22 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { ChevronDown, ChevronUp, ArrowLeft, Users, Clock, Wrench, CheckCircle, Target, AlertCircle, Lightbulb, BarChart, Layout, Monitor } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const IBASEtMESCaseStudy = ({ onBack }) => {
+  const h1Ref = useRef(null);
+
+  useEffect(() => {
+    const h1 = document.querySelectorAll('h1')[1];
+    if (h1) {
+      const absoluteTop = h1.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: absoluteTop - 180, behavior: 'instant' });
+    }
+    h1Ref.current?.focus();
+  }, []);
+
   const [expandedSections, setExpandedSections] = useState({
     challenge: true,
     team: true,
@@ -35,23 +46,27 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
         transition={{ duration: 0.6 }} 
         className="bg-white rounded-2xl border border-neutral-200 overflow-hidden"
       >
-        <button 
-          onClick={() => toggleSection(id)} 
-          className="w-full px-8 py-6 flex items-center justify-between hover:bg-neutral-50 transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-neutral-200"
+        <button
+          onClick={() => toggleSection(id)}
+          aria-expanded={expandedSections[id]}
+          aria-controls={`panel-${id}`}
+          className="w-full px-8 py-6 flex items-center justify-between hover:bg-neutral-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
         >
           <div className="flex items-center gap-4">
-            {Icon && <Icon size={24} className="text-neutral-600" />}
+            {Icon && <Icon size={24} className="text-neutral-600" aria-hidden="true" />}
             <h3 className="text-2xl font-bold text-neutral-900 text-left">{title}</h3>
           </div>
-          {expandedSections[id] ? <ChevronUp size={24} className="text-neutral-400" /> : <ChevronDown size={24} className="text-neutral-400" />}
+          {expandedSections[id] ? <ChevronUp size={24} className="text-neutral-400" aria-hidden="true" /> : <ChevronDown size={24} className="text-neutral-400" aria-hidden="true" />}
         </button>
-        
+
         {expandedSections[id] && (
-          <motion.div 
-            initial={{ height: 0, opacity: 0 }} 
-            animate={{ height: 'auto', opacity: 1 }} 
-            exit={{ height: 0, opacity: 0 }} 
-            transition={{ duration: 0.3 }} 
+          <motion.div
+            id={`panel-${id}`}
+            role="region"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
             className="px-8 pb-8"
           >
             {children}
@@ -67,7 +82,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
       <div className="sticky top-20 z-40 bg-neutral-50/95 backdrop-blur-sm border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-4">
           <Button onClick={onBack} variant="ghost" className="gap-2 hover:bg-neutral-100">
-            <ArrowLeft size={16} />
+            <ArrowLeft size={16} aria-hidden="true" />
             Back to Projects
           </Button>
         </div>
@@ -77,17 +92,17 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
       <section className="pt-12 pb-16 px-6 lg:px-12">
         <div className="max-w-6xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4 leading-tight">
+            <h1 ref={h1Ref} tabIndex={-1} className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-4 leading-tight outline-none">
               Revamping iBASEt's MES System: Prioritizing Usability in Legacy Manufacturing Software
             </h1>
             <p className="text-xl text-neutral-600 mb-8 max-w-3xl">
               Transforming a '90s-era Windows client into a streamlined, user-centric web platform for aerospace and defense manufacturing.
             </p>
             
-            {/* Logo Hero Image Container */}
-            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 bg-white flex items-center justify-center relative shadow-sm">
-              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }} className="w-full h-full flex items-center justify-center p-12 md:p-24 lg:p-32 bg-white">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/ibase_t_logo-9BL7c.jpg" alt="iBASEt Logo" className="max-w-full max-h-full object-contain" />
+            {/* Hero Image */}
+            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 relative shadow-sm">
+              <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }} className="w-full h-full">
+                <img src="/img/pexels-startup-stock-photos-7376.jpg" alt="Project planning board with sticky notes and sprint timeline" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
@@ -95,7 +110,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Users size={20} className="text-neutral-600" />
+                  <Users size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Role</span>
                 </div>
                 <p className="text-lg font-bold text-neutral-900">Lead UX Designer</p>
@@ -103,7 +118,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
               
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Clock size={20} className="text-neutral-600" />
+                  <Clock size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Timeline</span>
                 </div>
                 <p className="text-md font-bold text-neutral-900 leading-tight">Started in 2016, with init release in 2018</p>
@@ -111,7 +126,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
               
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Wrench size={20} className="text-neutral-600" />
+                  <Wrench size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Tools</span>
                 </div>
                 <p className="text-md font-bold text-neutral-900 leading-tight">Axure RP for wireframing and prototyping</p>
@@ -122,19 +137,19 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-neutral-900 text-white rounded-xl p-6 shadow-md">
                 <div className="flex flex-col h-full justify-between gap-4">
-                  <Layout className="text-neutral-400" size={28} />
+                  <Layout className="text-neutral-400" size={28} aria-hidden="true" />
                   <p className="text-lg font-semibold">50+ elements per screen reduced to 15-20</p>
                 </div>
               </div>
               <div className="bg-neutral-900 text-white rounded-xl p-6 shadow-md">
                 <div className="flex flex-col h-full justify-between gap-4">
-                  <Target className="text-neutral-400" size={28} />
+                  <Target className="text-neutral-400" size={28} aria-hidden="true" />
                   <p className="text-lg font-semibold">Improved task focus reported</p>
                 </div>
               </div>
               <div className="bg-neutral-900 text-white rounded-xl p-6 shadow-md">
                 <div className="flex flex-col h-full justify-between gap-4">
-                  <BarChart className="text-neutral-400" size={28} />
+                  <BarChart className="text-neutral-400" size={28} aria-hidden="true" />
                   <p className="text-lg font-semibold">Targeting NPS uplift and faster adoption</p>
                 </div>
               </div>
@@ -315,15 +330,15 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
                 <h4 className="font-bold mb-4">Anticipated Outcomes</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200"><strong>Reduced Clutter:</strong> Decreased screen element density significantly, minimizing cognitive load.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200"><strong>Faster Task Completion:</strong> Initial usability tests indicate a notable reduction in time spent navigating to core functions.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200"><strong>Modernization Foundation:</strong> Established a scalable, accessible web framework ready for future feature integrations.</span>
                   </li>
                 </ul>
@@ -362,7 +377,7 @@ const IBASEtMESCaseStudy = ({ onBack }) => {
       <section className="py-16 px-6 lg:px-12 bg-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto text-center">
           <Button onClick={onBack} size="lg" className="gap-2">
-            <ArrowLeft size={16} />
+            <ArrowLeft size={16} aria-hidden="true" />
             View More Projects
           </Button>
         </div>

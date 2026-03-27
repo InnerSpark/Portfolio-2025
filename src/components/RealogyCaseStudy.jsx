@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -9,6 +9,17 @@ import { Button } from '@/components/ui/button';
 const RealogyCaseStudy = ({
   onBack
 }) => {
+  const h1Ref = useRef(null);
+
+  useEffect(() => {
+    const h1 = document.querySelectorAll('h1')[1];
+    if (h1) {
+      const absoluteTop = h1.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: absoluteTop - 180, behavior: 'instant' });
+    }
+    h1Ref.current?.focus();
+  }, []);
+
   const [expandedSections, setExpandedSections] = useState({
     challenge: true,
     research: true,
@@ -48,15 +59,15 @@ const RealogyCaseStudy = ({
     } : {}} transition={{
       duration: 0.6
     }} className="bg-white rounded-2xl border border-neutral-200 overflow-hidden">
-        <button onClick={() => toggleSection(id)} className="w-full px-8 py-6 flex items-center justify-between hover:bg-neutral-50 transition-colors">
+        <button onClick={() => toggleSection(id)} aria-expanded={expandedSections[id]} aria-controls={`panel-${id}`} className="w-full px-8 py-6 flex items-center justify-between hover:bg-neutral-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
           <div className="flex items-center gap-4">
-            {Icon && <Icon size={24} className="text-neutral-600" />}
+            {Icon && <Icon size={24} className="text-neutral-600" aria-hidden="true" />}
             <h3 className="text-2xl font-bold text-neutral-900 text-left">{title}</h3>
           </div>
-          {expandedSections[id] ? <ChevronUp size={24} className="text-neutral-400" /> : <ChevronDown size={24} className="text-neutral-400" />}
+          {expandedSections[id] ? <ChevronUp size={24} className="text-neutral-400" aria-hidden="true" /> : <ChevronDown size={24} className="text-neutral-400" aria-hidden="true" />}
         </button>
-        
-        {expandedSections[id] && <motion.div initial={{
+
+        {expandedSections[id] && <motion.div id={`panel-${id}`} role="region" initial={{
         height: 0,
         opacity: 0
       }} animate={{
@@ -158,7 +169,7 @@ const RealogyCaseStudy = ({
       <div className="sticky top-20 z-40 bg-neutral-50/95 backdrop-blur-sm border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-4">
           <Button onClick={onBack} variant="ghost" className="gap-2 hover:bg-neutral-100">
-            <ArrowLeft size={16} />
+            <ArrowLeft size={16} aria-hidden="true" />
             Back to Projects
           </Button>
         </div>
@@ -176,12 +187,12 @@ const RealogyCaseStudy = ({
         }} transition={{
           duration: 0.8
         }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
+            <h1 ref={h1Ref} tabIndex={-1} className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight outline-none">
               Revamping Realogy's Leads Engine: Streamlining Lead Management for Real Estate Brokers
             </h1>
             
-            {/* Logo Hero Image Container */}
-            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 bg-white flex items-center justify-center relative shadow-sm">
+            {/* Hero Image */}
+            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 relative shadow-sm">
               <motion.div initial={{
               opacity: 0,
               scale: 0.95
@@ -191,8 +202,8 @@ const RealogyCaseStudy = ({
             }} transition={{
               duration: 1,
               delay: 0.2
-            }} className="w-full h-full flex items-center justify-center p-12 md:p-24 lg:p-32">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/00c8b266d393ac2385a338801d39590d.jpg" alt="Official Realogy Logo" className="max-w-full max-h-full object-contain" />
+            }} className="w-full h-full">
+                <img src="/img/pexels-startup-stock-photos-7369.jpg" alt="Team collaborating on UX strategy" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
@@ -200,7 +211,7 @@ const RealogyCaseStudy = ({
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Users size={20} className="text-neutral-600" />
+                  <Users size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Role</span>
                 </div>
                 <p className="text-lg font-bold text-neutral-900">Lead UX/UI Designer</p>
@@ -208,7 +219,7 @@ const RealogyCaseStudy = ({
               
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Clock size={20} className="text-neutral-600" />
+                  <Clock size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Timeline</span>
                 </div>
                 <p className="text-lg font-bold text-neutral-900">6 Months</p>
@@ -216,7 +227,7 @@ const RealogyCaseStudy = ({
               
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Wrench size={20} className="text-neutral-600" />
+                  <Wrench size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Tools</span>
                 </div>
                 <p className="text-lg font-bold text-neutral-900">Balsamiq, Figma</p>
@@ -257,7 +268,7 @@ const RealogyCaseStudy = ({
               duration: 0.5,
               delay: index * 0.1
             }} className="bg-white rounded-xl p-6 border border-neutral-200 text-center">
-                  <metric.icon size={32} className="mx-auto mb-3 text-neutral-600" />
+                  <metric.icon size={32} className="mx-auto mb-3 text-neutral-600" aria-hidden="true" />
                   <p className="text-3xl font-bold text-neutral-900 mb-2">{metric.value}</p>
                   <p className="text-sm text-neutral-600">{metric.label}</p>
                 </motion.div>)}
@@ -289,7 +300,7 @@ const RealogyCaseStudy = ({
             }} className="bg-neutral-50 rounded-xl p-6 border border-neutral-200">
                   <div className="flex items-start gap-4">
                     <div className="p-2 bg-white rounded-lg border border-neutral-200">
-                      <point.icon size={20} className="text-neutral-600" />
+                      <point.icon size={20} className="text-neutral-600" aria-hidden="true" />
                     </div>
                     <div>
                       <h4 className="font-bold text-neutral-900 mb-2">{point.title}</h4>
@@ -331,19 +342,19 @@ const RealogyCaseStudy = ({
                 <h4 className="font-bold text-neutral-900 mb-4">Research Methods</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-600"><strong>Contextual Inquiry:</strong> Observed brokers in their natural work environments to understand real workflow patterns</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-600"><strong>User Interviews:</strong> Conducted 30+ in-depth interviews with brokers, team leads, and administrators</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-600"><strong>Usability Testing:</strong> Tested existing system to identify pain points and friction areas</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-neutral-600 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-600"><strong>Analytics Analysis:</strong> Reviewed user behavior data to identify drop-off points and underutilized features</span>
                   </li>
                 </ul>
@@ -550,19 +561,19 @@ const RealogyCaseStudy = ({
                 <h4 className="font-bold mb-4">After Redesign</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200">Average task completion time: 2.7 minutes (-40%)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200">User satisfaction score: 84/100 (+45%)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200">Mobile usage: 36% of total sessions (+65%)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200">Support tickets: 180/month (-60%)</span>
                   </li>
                 </ul>
@@ -601,7 +612,7 @@ const RealogyCaseStudy = ({
       <section className="py-16 px-6 lg:px-12 bg-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto text-center">
           <Button onClick={onBack} size="lg" className="gap-2">
-            <ArrowLeft size={16} />
+            <ArrowLeft size={16} aria-hidden="true" />
             View More Projects
           </Button>
         </div>

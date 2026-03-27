@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -9,6 +9,17 @@ import { Button } from '@/components/ui/button';
 const IBASEtCaseStudy = ({
   onBack
 }) => {
+  const h1Ref = useRef(null);
+
+  useEffect(() => {
+    const h1 = document.querySelectorAll('h1')[1];
+    if (h1) {
+      const absoluteTop = h1.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: absoluteTop - 180, behavior: 'instant' });
+    }
+    h1Ref.current?.focus();
+  }, []);
+
   const [expandedSections, setExpandedSections] = useState({
     challenge: true,
     research: true,
@@ -43,15 +54,15 @@ const IBASEtCaseStudy = ({
     } : {}} transition={{
       duration: 0.6
     }} className="bg-white rounded-2xl border border-neutral-200 overflow-hidden">
-        <button onClick={() => toggleSection(id)} className="w-full px-8 py-6 flex items-center justify-between hover:bg-neutral-50 transition-colors">
+        <button onClick={() => toggleSection(id)} aria-expanded={expandedSections[id]} aria-controls={`panel-${id}`} className="w-full px-8 py-6 flex items-center justify-between hover:bg-neutral-50 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
           <div className="flex items-center gap-4">
-            {Icon && <Icon size={24} className="text-neutral-600" />}
+            {Icon && <Icon size={24} className="text-neutral-600" aria-hidden="true" />}
             <h3 className="text-2xl font-bold text-neutral-900 text-left">{title}</h3>
           </div>
-          {expandedSections[id] ? <ChevronUp size={24} className="text-neutral-400" /> : <ChevronDown size={24} className="text-neutral-400" />}
+          {expandedSections[id] ? <ChevronUp size={24} className="text-neutral-400" aria-hidden="true" /> : <ChevronDown size={24} className="text-neutral-400" aria-hidden="true" />}
         </button>
-        
-        {expandedSections[id] && <motion.div initial={{
+
+        {expandedSections[id] && <motion.div id={`panel-${id}`} role="region" initial={{
         height: 0,
         opacity: 0
       }} animate={{
@@ -72,7 +83,7 @@ const IBASEtCaseStudy = ({
       <div className="sticky top-20 z-40 bg-neutral-50/95 backdrop-blur-sm border-b border-neutral-200">
         <div className="max-w-6xl mx-auto px-6 lg:px-12 py-4">
           <Button onClick={onBack} variant="ghost" className="gap-2 hover:bg-neutral-100">
-            <ArrowLeft size={16} />
+            <ArrowLeft size={16} aria-hidden="true" />
             Back to Projects
           </Button>
         </div>
@@ -90,12 +101,12 @@ const IBASEtCaseStudy = ({
         }} transition={{
           duration: 0.8
         }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
+            <h1 ref={h1Ref} tabIndex={-1} className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight outline-none">
               iBASEt Unit Info App: Mobile Workflow for Shop Floor Technicians
             </h1>
             
-            {/* Logo Hero Image Container - Updated Background to bg-white */}
-            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 bg-white flex items-center justify-center relative shadow-sm">
+            {/* Hero Image */}
+            <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 relative shadow-sm">
               <motion.div initial={{
               opacity: 0,
               scale: 0.95
@@ -105,8 +116,8 @@ const IBASEtCaseStudy = ({
             }} transition={{
               duration: 1,
               delay: 0.2
-            }} className="w-full h-full flex items-center justify-center p-12 md:p-24 lg:p-32 bg-white">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/ibase_t_logo-9BL7c.jpg" alt="iBASEt Logo" className="max-w-full max-h-full object-contain" />
+            }} className="w-full h-full">
+                <img src="/img/pexels-yankrukov-7793696.jpg" alt="Designer sketching on sticky notes during ideation session" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
@@ -114,7 +125,7 @@ const IBASEtCaseStudy = ({
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Users size={20} className="text-neutral-600" />
+                  <Users size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Role</span>
                 </div>
                 <p className="text-lg font-bold text-neutral-900">Lead UX Designer</p>
@@ -122,7 +133,7 @@ const IBASEtCaseStudy = ({
               
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Clock size={20} className="text-neutral-600" />
+                  <Clock size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Timeline</span>
                 </div>
                 <p className="text-lg font-bold text-neutral-900">4 Months</p>
@@ -130,7 +141,7 @@ const IBASEtCaseStudy = ({
               
               <div className="bg-white rounded-xl p-6 border border-neutral-200">
                 <div className="flex items-center gap-3 mb-2">
-                  <Wrench size={20} className="text-neutral-600" />
+                  <Wrench size={20} className="text-neutral-600" aria-hidden="true" />
                   <span className="text-sm font-medium text-neutral-500 uppercase tracking-wider">Tools</span>
                 </div>
                 <p className="text-lg font-bold text-neutral-900">Figma, Miro</p>
@@ -265,15 +276,15 @@ const IBASEtCaseStudy = ({
                 <h4 className="font-bold mb-4">Key Outcomes</h4>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200">Significant reduction in manual data entry errors.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200">Saved technicians an estimated 1-2 hours per shift in travel time.</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={20} className="text-green-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
                     <span className="text-neutral-200">Faster resolution of shop floor discrepancies.</span>
                   </li>
                 </ul>
@@ -294,7 +305,7 @@ const IBASEtCaseStudy = ({
       <section className="py-16 px-6 lg:px-12 bg-white border-t border-neutral-200">
         <div className="max-w-6xl mx-auto text-center">
           <Button onClick={onBack} size="lg" className="gap-2">
-            <ArrowLeft size={16} />
+            <ArrowLeft size={16} aria-hidden="true" />
             View More Projects
           </Button>
         </div>

@@ -10,11 +10,13 @@ import Resume from '@/components/Resume';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import AccessibilityStatement from '@/components/AccessibilityStatement';
+import PrivacyPolicy from '@/components/PrivacyPolicy';
 
 const MainLayout = () => (
   <>
     <Header />
-    <main>
+    <main id="main-content">
       <Hero />
       <About />
       <Projects />
@@ -47,6 +49,8 @@ function App() {
         <div className="min-h-screen bg-neutral-50 text-neutral-900">
           <Routes>
             <Route path="/" element={<MainLayout />} />
+            <Route path="/accessibility" element={<AccessibilityStatement />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
           </Routes>
           <Toaster />
         </div>

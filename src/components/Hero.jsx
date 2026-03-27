@@ -54,7 +54,7 @@ const Hero = () => {
 
             <motion.button 
               onClick={scrollToAbout} 
-              className="inline-flex items-center gap-3 text-neutral-900 hover:text-neutral-600 transition-colors group font-semibold" 
+              className="inline-flex items-center gap-3 text-neutral-900 hover:text-neutral-600 transition-colors group font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600" 
               initial={{ opacity: 0 }} 
               animate={{ opacity: 1 }} 
               transition={{ duration: 0.8, delay: 0.4 }} 
@@ -62,7 +62,7 @@ const Hero = () => {
             >
               <span className="text-sm md:text-base uppercase tracking-wider">Explore Work</span>
               <div className="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center group-hover:bg-brand-blue transition-colors">
-                <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform group-hover:text-white" />
+                <ArrowDown size={18} className="group-hover:translate-y-1 transition-transform group-hover:text-white" aria-hidden="true" />
               </div>
             </motion.button>
           </motion.div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -17,10 +17,12 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const navigate = useNavigate();
 
+
   const handleProjectClick = (projectId) => {
     if (projectId === 'db-hoovers' || projectId === 'realogy' || projectId === 'ibaset' || projectId === 'ibaset-mes') {
+      sessionStorage.setItem('returnScrollY', window.scrollY);
+      window.history.pushState({ caseStudy: projectId }, '', `#${projectId}`);
       setSelectedProject(projectId);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       toast({
         title: '🚧 This feature isn\'t implemented yet—but don\'t worry! You can request it in your next prompt! 🚀',
@@ -28,14 +30,22 @@ const Projects = () => {
     }
   };
 
-  const handleBackToProjects = () => {
-    setSelectedProject(null);
-    setTimeout(() => {
-      const projectsSection = document.getElementById('projects');
-      if (projectsSection) {
-        projectsSection.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => {
+    const handlePopState = () => {
+      if (selectedProject) {
+        setSelectedProject(null);
+        const savedY = parseInt(sessionStorage.getItem('returnScrollY') || '0');
+        setTimeout(() => {
+          window.scrollTo({ top: savedY, behavior: 'instant' });
+        }, 0);
       }
-    }, 100);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [selectedProject]);
+
+  const handleBackToProjects = () => {
+    window.history.back();
   };
 
   const projects = [
@@ -80,7 +90,7 @@ const Projects = () => {
   if (selectedProject === 'realogy') {
     return <RealogyCaseStudy onBack={handleBackToProjects} />;
   }
-  
+
   if (selectedProject === 'ibaset') {
     return <IBASEtCaseStudy onBack={handleBackToProjects} />;
   }
@@ -117,7 +127,7 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 + (index * 0.1) }}
-                className="w-full text-left group block focus:outline-none"
+                className="w-full text-left group block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 aria-label={`View full case study for ${project.title}`}
               >
                 <div className="bg-white border border-neutral-200 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:border-neutral-300 group-focus-visible:ring-4 group-focus-visible:ring-neutral-200 group-focus-visible:outline-none relative">
@@ -141,9 +151,10 @@ const Projects = () => {
                           {project.category}
                         </span>
                         <div className="w-12 h-12 rounded-full bg-neutral-50 flex items-center justify-center border border-neutral-100 group-hover:bg-brand-blue group-hover:border-brand-blue transition-colors duration-300 flex-shrink-0">
-                          <ArrowUpRight 
-                            size={24} 
-                            className="text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" 
+                          <ArrowUpRight
+                            size={24}
+                            className="text-neutral-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300"
+                            aria-hidden="true"
                           />
                         </div>
                       </div>
