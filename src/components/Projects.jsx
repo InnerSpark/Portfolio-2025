@@ -121,12 +121,7 @@ const Projects = () => {
                 aria-label={`View full case study for ${project.title}`}
               >
                 <div className="bg-white border border-neutral-200 rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:border-neutral-300 group-focus-visible:ring-4 group-focus-visible:ring-neutral-200 group-focus-visible:outline-none relative">
-                  {project.id === 'db-hoovers' && (
-                    <div className="absolute top-4 right-4 z-20 bg-neutral-900 text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-lg">
-                      <span className="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span>
-                      Protected
-                    </div>
-                  )}
+
                   <div className="grid lg:grid-cols-5 h-full">
                     
                     {/* Image Section */}
