@@ -18,17 +18,16 @@ const Resume = () => {
 
   const experience = [
     {
-      title: 'Sr. UX Designer',
+      title: 'Sr. UX Designer · Accessibility Lead · Design Governance Board',
       company: 'Dun & Bradstreet',
       location: 'Austin, Texas, United States · Remote',
-      period: 'Jul 2022 - March 2026',
+      period: 'Jul 2022 – Mar 2026',
       description: 'Business Information / Data Analytics',
       duties: [
-        'Led research and redesign efforts on D&B Hoovers (our B2B sales intel platform). Cleaned up workflows so sales reps prospect 28% faster.',
-        'Pushed accessibility company-wide: wrote guidelines, started the accessibility working group, drove WCAG standards everywhere, in doing such I cut accessibility issues by 40% and got people actually caring and talking about inclusive design daily.',
-        'On the Design System Governance Board: I helped evolve a solid, accessible enterprise system that works now and scales for whatever comes next.',
-        'Mentored designers and cross-functional teams on WCAG and inclusive principles. This helped team\'s accessibility knowledge go up, and the product quality improved.',
-        'Co-led our AI integration push: added prospect scoring, smart search, intent data, generative tools. This sped up prospecting by 20-30% and helped revenue grow.'
+        'Built and led D&B\'s company-wide accessibility program: established WCAG standards, launched a cross-functional working group, produced VPATs for top-tier products, and reduced accessibility issues by 40%.',
+        'Co-led AI integration across our B2B platform — prospect scoring, smart search, intent data, and generative tools — speeding up prospecting by 20–30% and contributing to measurable revenue growth.',
+        'Led research and redesign of D&B Hoovers, our B2B sales intelligence platform. Cleaned up workflows so sales reps prospect 28% faster.',
+        'Sat on the Design System Governance Board while mentoring designers and cross-functional teams on WCAG, raising accessibility knowledge across the org.'
       ],
       employmentType: 'Full-time'
     },
@@ -39,11 +38,9 @@ const Resume = () => {
       period: 'Oct 2021 - Jun 2022 · 9 mos',
       description: 'Tech Support / Customer Experience Software',
       duties: [
-        'Mentored a team of designers across multiple products, guiding high-quality deliverables and professional growth.',
-        'Teamed up with product to improve platform usage. Boosted adoption 20% and made users more efficient.',
-        'Built cross-departmental relationships to align design efforts with organizational goals and foster collaboration.',
-        'Handled user research (personas, competitive stuff, usability tests, A/B). Turned findings into decisions that bumped satisfaction scores 20%.',
-        'Ran design workshops to fix processes and make our team workflow smoother.'
+        'Mentored designers across multiple products and partnered with product to boost platform adoption 20% and measurably improve user efficiency.',
+        'Conducted user research — personas, competitive analysis, usability tests, A/B — and turned findings into decisions that bumped satisfaction scores 20%.',
+        'Facilitated design workshops that fixed processes and smoothed team workflows.'
       ],
       employmentType: 'Full-time'
     },
@@ -67,9 +64,10 @@ const Resume = () => {
       period: 'April 2015 – June 2020',
       description: 'Manufacturing Execution Systems',
       employmentType: 'Full-time',
+      intro: 'Joined as iBASEt\'s first ever UX hire and built the entire practice from scratch — no team, no design system, no process. Over 5 years I hired and mentored 2 designers, defined our standards, and owned UX end-to-end for Solumina iNEXT/iSeries, the company\'s flagship MES for aerospace, defense, and precision manufacturing, achieving 80% shop-floor adoption in Q1 of launch.',
       duties: [
-        'Owned UX end-to-end for Solumina iNEXT/iSeries (flagship MES for aerospace/defense/precision manufacturing). Led full redesign from concept to launch: modern, intuitive, responsive UI with 80%+ shop-floor adoption in Q1.',
         'Built and maintained a scalable design system. Kept UI/UX consistent which cut bugs 40% and sped up dev.',
+        'Audited the existing product for accessibility gaps on day one and made inclusive design a core part of every decision. Pushed for WCAG compliance in a company that had never prioritized it.',
         'Built and led a solid UX design team where we cultivated collaboration with customers, product owners, developers, implementation teams, and end-users to deliver solutions aligned with rigorous industry standards.',
         'Defined and drove responsive, multi-device UX strategy supporting desktops, tablets, touchscreens, mobile, gloved/cleanroom operations, and emerging inputs (e.g., augmented reality), dramatically improving shop-floor productivity by 40%.',
         'Collaborated to rethink complex manufacturing flows into simpler, error-resistant designs. Dropped errors 20%, sped up critical tasks in high-stakes settings.'
@@ -263,6 +261,12 @@ const Resume = () => {
                         </p>
                       )} */}
                       
+                      {job.intro && (
+                        <p className="text-sm text-neutral-600 leading-relaxed mb-4">
+                          {job.intro}
+                        </p>
+                      )}
+
                       {job.duties && (
                         <ul className="list-disc list-outside pl-5 space-y-2 text-sm text-neutral-600">
                           {job.duties.map((duty, i) => (

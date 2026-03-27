@@ -26,13 +26,14 @@ const About = () => {
           
           <div className="grid md:grid-cols-2 gap-16 items-start">
             <div className="space-y-6">
-              <p className="text-4xl md:text-5xl font-bold leading-tight text-neutral-900">UX Designer & Strategist | Founder, Inner Spark Media</p>
+              <p className="text-4xl md:text-5xl font-bold leading-tight text-neutral-900">Senior UX Leader | Accessibility · AI UX · Enterprise B2B</p>
               
               <div className="space-y-4 text-neutral-600 leading-relaxed">
-                <p>I started building websites in the mid-90s with MS Paint and Notepad, freelancing for local businesses in high school and launching my own agency as a teen. After a degree in Interactive Media Design, I evolved into a full-stack hybrid before committing to UX Design in 2009.</p>
-              <p>Today, I champion intuitive, inclusive experiences—obsessed with information architecture that makes complexity feel simple and web accessibility that includes everyone. At iBASEt, I built and led a small UI/UX team from zero, embedding real UX culture and transforming manufacturing workflows for faster, frictionless daily operations in aerospace & defense.</p>
-              <p>I've driven similar impact at Dun & Bradstreet, Realogy, and more—speeding enterprise tasks and proving UX's ROI. Through Inner Spark Media, I consult strategically, guiding small businesses on direction, IA, accessibility, and AI integration (agent flows that go way beyond chat to automate decisions and augment work).</p>
-              <p>I turn complex problems into clear, efficient solutions users love. Let's talk if you need a seasoned UX leader who delivers results.</p>
+                <p>I've been doing this for over 25 years and I still genuinely love it. That's not something a lot of people in this industry can say, but UX has never felt like a job to me. It's how I think.</p>
+              <p>My background is in enterprise B2B software — the kind where the stakes are real and the complexity is deep. I've designed for aerospace engineers building rockets on a shop floor, sales teams navigating massive datasets, real estate brokers managing high-volume leads. The through line in all of it is the same: take something overwhelming and make it feel effortless for the person actually using it.</p>
+              <p>Accessibility has been part of how I design since the beginning of my career, long before most people were paying attention to it. At Dun & Bradstreet I built the company-wide accessibility working group from scratch, established WCAG standards across products, led VPATs for our top-tier offerings, and cut accessibility issues by 40%. I don't treat it as a compliance checkbox. I treat it as the baseline for good design.</p>
+              <p>I'm a builder by nature. I've built design teams, built accessibility programs, built the kind of cross-functional relationships that actually get things shipped. People tend to come to me when something is complicated and nobody is quite sure how to move forward. I like that.</p>
+              <p>Currently open to UX Lead, Manager, Director, or Senior Product Designer roles at enterprise B2B companies where design is taken seriously. Remote or hybrid, based in Austin, TX.</p>
               </div>
             </div>
 

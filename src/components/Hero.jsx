@@ -31,7 +31,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              UX Designer
+              SENIOR UX LEADER
             </motion.h2>
 
             <motion.h1 
@@ -49,7 +49,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.8, delay: 0.3 }}
             >
-              Specializing in UX Design, Accessibility, and Information Architecture for engaging and inclusive digital experiences.
+              25 years designing enterprise B2B software where complexity is the norm. Accessibility, AI UX, and information architecture that actually moves the needle.
             </motion.p>
 
             <motion.button 
