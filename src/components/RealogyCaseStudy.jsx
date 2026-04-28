@@ -203,7 +203,7 @@ const RealogyCaseStudy = ({
               duration: 1,
               delay: 0.2
             }} className="w-full h-full">
-                <img src="/img/pexels-startup-stock-photos-7369.jpg" alt="Team collaborating on UX strategy" className="w-full h-full object-cover" />
+                <img src="/img/stock-ux-strategy.jpg" alt="Team collaborating on UX strategy" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
@@ -471,7 +471,7 @@ const RealogyCaseStudy = ({
           }} transition={{
             duration: 0.3
           }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white mb-4">
-              <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1ced0a6bedff3dc176710d4670abcd87.png" alt="Realogy Leads Engine Manage Leads dashboard showing dark navy header, sidebar filters, and leads list interface" loading="lazy" className="w-full h-auto object-cover" />
+              <img src="/img/realogy-manage-leads.png" alt="Realogy Leads Engine Manage Leads dashboard showing dark navy header, sidebar filters, and leads list interface" loading="lazy" className="w-full h-auto object-cover" />
             </motion.div>
           </Section>
 
@@ -486,7 +486,7 @@ const RealogyCaseStudy = ({
           }} transition={{
             duration: 0.3
           }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white">
-              <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/f896660ce789d813ba284d4ae060d849.png" alt="Realogy Leads Engine interface showing lead details screen with contact information and event logs" loading="lazy" className="w-full h-auto object-cover" />
+              <img src="/img/realogy-lead-details.png" alt="Realogy Leads Engine interface showing lead details screen with contact information and event logs" loading="lazy" className="w-full h-auto object-cover" />
             </motion.div>
           </Section>
 
@@ -494,7 +494,7 @@ const RealogyCaseStudy = ({
           <Section id="distribution" title="Intelligent Lead Distribution Rules" icon={Layout}>
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white order-2 md:order-1">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/1e6b6be4260b73b8befdc5b3403a6ec5.png" alt="Learning Rule Configuration" loading="lazy" className="w-full h-auto object-cover" />
+                <img src="/img/realogy-rule-builder.png" alt="Learning Rule Configuration" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
               <div className="order-1 md:order-2">
                 <p className="text-neutral-600 leading-relaxed">
@@ -513,7 +513,7 @@ const RealogyCaseStudy = ({
                 </p>
               </div>
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white order-2">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/9a852abf54540e3159621c15d788dfcd.png" alt="User Management System" loading="lazy" className="w-full h-auto object-cover" />
+                <img src="/img/realogy-user-manager.png" alt="User Management System" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
             </div>
           </Section>
@@ -522,7 +522,7 @@ const RealogyCaseStudy = ({
           <Section id="leadCreation" title="Streamlined Lead Intake Process" icon={Target}>
             <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
               <motion.div whileHover={{ scale: 1.02 }} className="rounded-2xl overflow-hidden border border-neutral-200 shadow-xl bg-white order-2 md:order-1">
-                <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/a0c74fb641702e340cf745e4f986c0ef.png" alt="Lead Creation & Management" loading="lazy" className="w-full h-auto object-cover" />
+                <img src="/img/realogy-lead-creation.png" alt="Lead Creation & Management" loading="lazy" className="w-full h-auto object-cover" />
               </motion.div>
               <div className="order-1 md:order-2">
                 <p className="text-neutral-600 leading-relaxed">

@@ -117,7 +117,7 @@ const IBASEtCaseStudy = ({
               duration: 1,
               delay: 0.2
             }} className="w-full h-full">
-                <img src="/img/pexels-yankrukov-7793696.jpg" alt="Designer sketching on sticky notes during ideation session" className="w-full h-full object-cover" />
+                <img src="/img/stock-ideation-session.jpg" alt="Designer sketching on sticky notes during ideation session" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 
@@ -233,7 +233,7 @@ const IBASEtCaseStudy = ({
                 <motion.div whileHover={{
                 scale: 1.05
               }} className="rounded-[2rem] overflow-hidden border-8 border-neutral-900 shadow-2xl bg-white max-w-[280px]">
-                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/46ec728cfcd2e1e65dbef0be06a69024.png" alt="Barcode scanning interface" loading="lazy" className="w-full h-auto object-cover" />
+                  <img src="/img/ibaset-unit-info-scan.png" alt="Barcode scanning interface" loading="lazy" className="w-full h-auto object-cover" />
                 </motion.div>
                 <div>
                   <h4 className="font-bold text-neutral-900 mb-2">Barcode Scanner</h4>
@@ -246,7 +246,7 @@ const IBASEtCaseStudy = ({
                 <motion.div whileHover={{
                 scale: 1.05
               }} className="rounded-[2rem] overflow-hidden border-8 border-neutral-900 shadow-2xl bg-white max-w-[280px]">
-                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/64399a14366ccd60a5083aef196ab85e.png" alt="Unit Information search screen" loading="lazy" className="w-full h-auto object-cover" />
+                  <img src="/img/ibaset-unit-info-grid.png" alt="Unit Information search screen" loading="lazy" className="w-full h-auto object-cover" />
                 </motion.div>
                 <div>
                   <h4 className="font-bold text-neutral-900 mb-2">Unit Details Dashboard</h4>
@@ -259,7 +259,7 @@ const IBASEtCaseStudy = ({
                 <motion.div whileHover={{
                 scale: 1.05
               }} className="rounded-[2rem] overflow-hidden border-8 border-neutral-900 shadow-2xl bg-white max-w-[280px]">
-                  <img src="https://horizons-cdn.hostinger.com/afac7b0c-73d0-4329-ae95-e7196d35c98d/unit-info-discrepancy-create-9P0A6.png" alt="Discrepancy form interface" loading="lazy" className="w-full h-auto object-cover" />
+                  <img src="/img/ibaset-unit-info-discrepancy.png" alt="Discrepancy form interface" loading="lazy" className="w-full h-auto object-cover" />
                 </motion.div>
                 <div>
                   <h4 className="font-bold text-neutral-900 mb-2">Discrepancy Logging</h4>
