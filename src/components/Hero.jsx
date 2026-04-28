@@ -80,7 +80,7 @@ const Hero = () => {
             <div className="relative w-full max-w-md md:max-w-lg lg:max-w-xl flex justify-center md:justify-end">
               <div className="w-full">
                 <img 
-                  src="/img/hero-profile.jpg" 
+                  src="/img/hero-profile.png" 
                   alt="Mike Binder - Professional Headshot" 
                   className="w-full h-auto object-contain select-none pointer-events-none" 
                 />
