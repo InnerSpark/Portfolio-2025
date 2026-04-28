@@ -103,7 +103,7 @@ const DBHooversCaseStudy = ({ onBack }) => {
             {/* Hero Image */}
             <div className="aspect-video rounded-2xl overflow-hidden mb-8 border border-neutral-200 relative shadow-sm">
               <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }} className="w-full h-full">
-                <img src="/img/pexels-divinetechygirl-1181343.jpg" alt="UX designer reviewing wireframes and user flows on a whiteboard" className="w-full h-full object-cover" />
+                <img src="/img/stock-wireframe-review.jpg" alt="UX designer reviewing wireframes and user flows on a whiteboard" className="w-full h-full object-cover" />
               </motion.div>
             </div>
 

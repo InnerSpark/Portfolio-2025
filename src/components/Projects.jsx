@@ -55,7 +55,7 @@ const Projects = () => {
       category: 'UX/UI Design • AI Integration',
       description: 'Envisioning an AI-Driven, Accessible Future for Business Intelligence. Redesigning the search experience to improve time-to-insight by up to 65%.',
       tags: ['AI Search', 'Accessibility', 'Figma', 'Enterprise SaaS'],
-      image: '/img/dnb_hero_home.png',
+      image: '/img/dnb-hero-home.png',
     },
     {
       id: 'realogy',
@@ -63,7 +63,7 @@ const Projects = () => {
       category: 'UX/UI Design • Enterprise SaaS',
       description: 'Complete redesign of a lead management platform serving 50K+ daily leads for real estate brokers across major brands. Reduced task completion time by 40% and increased user satisfaction by 45%.',
       tags: ['Enterprise UX', 'Information Architecture', 'Mobile Design', 'Usability Testing'],
-      image: '/img/realogy_hero_home.png',
+      image: '/img/realogy-hero-home.png',
     },
     {
       id: 'ibaset-mes',
@@ -71,7 +71,7 @@ const Projects = () => {
       category: 'UX/UI Design • Enterprise Software',
       description: "Transforming a '90s-era Windows client into a streamlined, user-centric web platform for aerospace and defense manufacturing.",
       tags: ['UX Design', 'Enterprise Software', 'Usability', 'Axure RP'],
-      image: '/img/ibaset_hero_home.png',
+      image: '/img/ibaset-hero-home.png',
     },
     {
       id: 'ibaset',
@@ -79,7 +79,7 @@ const Projects = () => {
       category: 'UX/UI Design • Mobile App',
       description: 'Mobile solution for shop floor technicians in aerospace/defense manufacturing, enabling barcode scanning and on-the-spot part actions.',
       tags: ['UX Design', 'Mobile', 'Enterprise Software', 'Manufacturing'],
-      image: '/img/ibaset_unit_info_hero_home.png'
+      image: '/img/ibaset-unit-info-hero-home.png'
     }
   ];
 
